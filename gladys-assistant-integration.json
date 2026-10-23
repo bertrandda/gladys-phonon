@@ -1,0 +1,996 @@
+{
+  "manifest_version": 1,
+  "type": "tts",
+  "name": "Phonon TTS",
+  "description": {
+    "en": "Offline text-to-speech: Gladys speaks with Gradium's Phonon voices, on your own hardware.",
+    "fr": "Synthèse vocale hors ligne : Gladys parle avec les voix Phonon de Gradium, sur votre machine."
+  },
+  "version": "0.1.0",
+  "docker_image": "ghcr.io/bertrandda/gladys-phonon:0.1.0",
+  "gladys_version": ">=5.3.0",
+  "cover_image": "https://raw.githubusercontent.com/bertrandda/gladys-phonon/HEAD/cover.png",
+  "categories": ["assistants"],
+  "containers": [
+    {
+      "name": "phonon",
+      "docker_image": "ghcr.io/gradium-ai/ptts-openai-server:0.4.1",
+      "start": "manual",
+      "volumes": ["/models"],
+      "memory_mb": 1024,
+      "cpu": 2,
+      "env": {
+        "PTTS_ADDR": "0.0.0.0:8880",
+        "PTTS_MAX_CONCURRENT_REQUESTS": "1",
+        "PTTS_VOICE_CATALOG": "",
+        "PTTS_VOICE_DIR": "/models/voices"
+      }
+    }
+  ],
+  "config_schema": [
+    {
+      "key": "intro",
+      "type": "section",
+      "label": { "en": "Phonon model", "fr": "Modèle Phonon" },
+      "description": {
+        "en": "Nothing is downloaded and Gladys cannot speak until you choose a model and save. The 40m models need a free Hugging Face account: open the model page, accept its terms (approval is instant), then create a read token. They are licensed CC BY-NC 4.0 (non-commercial use). Phonon 31m (English) is Apache 2.0 and needs no account. Once downloaded, everything runs offline.",
+        "fr": "Rien n'est téléchargé et Gladys ne peut pas parler tant que vous n'avez pas choisi un modèle et enregistré. Les modèles 40m demandent un compte Hugging Face gratuit : ouvrez la page du modèle, acceptez ses conditions (validation immédiate), puis créez un token en lecture. Ils sont sous licence CC BY-NC 4.0 (usage non commercial). Phonon 31m (anglais) est sous licence Apache 2.0 et ne demande pas de compte. Une fois téléchargé, tout fonctionne hors ligne."
+      },
+      "links": [
+        {
+          "url": "https://huggingface.co/gradium/phonon-40m-fr",
+          "label": {
+            "en": "Phonon 40m French model page",
+            "fr": "Page du modèle Phonon 40m français"
+          }
+        },
+        {
+          "url": "https://huggingface.co/gradium",
+          "label": { "en": "Every Phonon model", "fr": "Tous les modèles Phonon" }
+        },
+        {
+          "url": "https://huggingface.co/settings/tokens",
+          "label": { "en": "Create a Hugging Face token", "fr": "Créer un token Hugging Face" }
+        }
+      ]
+    },
+    {
+      "key": "model",
+      "type": "select",
+      "label": { "en": "Model", "fr": "Modèle" },
+      "description": {
+        "en": "Each 40m model speaks one language. The multilingual one speaks all five: pick its language below.",
+        "fr": "Chaque modèle 40m parle une langue. Le multilingue parle les cinq : choisissez sa langue ci-dessous."
+      },
+      "required": true,
+      "options": [
+        {
+          "value": "phonon-40m-fr",
+          "label": {
+            "en": "Phonon 40m · French (75 MB, Hugging Face account)",
+            "fr": "Phonon 40m · Français (75 Mo, compte Hugging Face)"
+          }
+        },
+        {
+          "value": "phonon-40m-en",
+          "label": {
+            "en": "Phonon 40m · English (75 MB, Hugging Face account)",
+            "fr": "Phonon 40m · Anglais (75 Mo, compte Hugging Face)"
+          }
+        },
+        {
+          "value": "phonon-40m-de",
+          "label": {
+            "en": "Phonon 40m · German (75 MB, Hugging Face account)",
+            "fr": "Phonon 40m · Allemand (75 Mo, compte Hugging Face)"
+          }
+        },
+        {
+          "value": "phonon-40m-es",
+          "label": {
+            "en": "Phonon 40m · Spanish (75 MB, Hugging Face account)",
+            "fr": "Phonon 40m · Espagnol (75 Mo, compte Hugging Face)"
+          }
+        },
+        {
+          "value": "phonon-40m-pt",
+          "label": {
+            "en": "Phonon 40m · Portuguese (75 MB, Hugging Face account)",
+            "fr": "Phonon 40m · Portugais (75 Mo, compte Hugging Face)"
+          }
+        },
+        {
+          "value": "phonon-40m-multilingual",
+          "label": {
+            "en": "Phonon 40m · Multilingual (75 MB, Hugging Face account)",
+            "fr": "Phonon 40m · Multilingue (75 Mo, compte Hugging Face)"
+          }
+        },
+        {
+          "value": "phonon-31m-en",
+          "label": {
+            "en": "Phonon 31m · English (65 MB, no account)",
+            "fr": "Phonon 31m · Anglais (65 Mo, sans compte)"
+          }
+        }
+      ]
+    },
+    {
+      "key": "language",
+      "type": "select",
+      "label": {
+        "en": "Language (multilingual model only)",
+        "fr": "Langue (modèle multilingue uniquement)"
+      },
+      "description": {
+        "en": "How numbers, dates and symbols are read out. Ignored by the single-language models.",
+        "fr": "Façon de lire les nombres, les dates et les symboles. Ignoré par les modèles d'une seule langue."
+      },
+      "options": [
+        { "value": "fr", "label": { "en": "French", "fr": "Français" } },
+        { "value": "en", "label": { "en": "English", "fr": "Anglais" } },
+        { "value": "de", "label": { "en": "German", "fr": "Allemand" } },
+        { "value": "es", "label": { "en": "Spanish", "fr": "Espagnol" } },
+        { "value": "pt", "label": { "en": "Portuguese", "fr": "Portugais" } }
+      ]
+    },
+    {
+      "key": "hf_token",
+      "type": "secret",
+      "label": { "en": "Hugging Face token", "fr": "Token Hugging Face" },
+      "description": {
+        "en": "Read token of the account that accepted the model's terms. Only used to download a 40m model, never sent to the speech engine.",
+        "fr": "Token en lecture du compte qui a accepté les conditions du modèle. Sert uniquement à télécharger un modèle 40m, jamais transmis au moteur de synthèse."
+      },
+      "placeholder": { "en": "hf_…", "fr": "hf_…" }
+    },
+    {
+      "key": "voices_intro",
+      "type": "section",
+      "label": { "en": "Voice", "fr": "Voix" },
+      "description": {
+        "en": "Choose the model's own voice or one of the voices of the Phonon catalog: listen to them on the demo page first. Only the selected voice is downloaded. Every voice works with every model, but sounds best in its own language. You can also use a voice you designed or cloned in Gradium Studio.",
+        "fr": "Choisissez la voix du modèle ou l'une des voix du catalogue Phonon : écoutez-les d'abord sur la page de démonstration. Seule la voix choisie est téléchargée. Toutes les voix fonctionnent avec tous les modèles, mais sonnent mieux dans leur langue. Vous pouvez aussi utiliser une voix créée ou clonée dans Gradium Studio."
+      },
+      "links": [
+        {
+          "url": "https://bertrandda.github.io/gladys-phonon/",
+          "label": { "en": "Listen to the voices", "fr": "Écouter les voix" }
+        },
+        {
+          "url": "https://studio.gradium.ai/",
+          "label": { "en": "Gradium Studio", "fr": "Gradium Studio" }
+        }
+      ]
+    },
+    {
+      "key": "voice",
+      "type": "select",
+      "label": { "en": "Voice", "fr": "Voix" },
+      "default": "default",
+      "options": [
+        {
+          "value": "default",
+          "label": { "en": "Model's default voice", "fr": "Voix par défaut du modèle" }
+        },
+        {
+          "value": "aXMVwiUhITMrwPzd",
+          "label": {
+            "en": "French (France) · Arnaud — male, middle-aged",
+            "fr": "Français (France) · Arnaud — homme, d'âge mûr"
+          }
+        },
+        {
+          "value": "Tek4tJXiX6_yvXq7",
+          "label": {
+            "en": "French (France) · Augustin — male, adult",
+            "fr": "Français (France) · Augustin — homme, adulte"
+          }
+        },
+        {
+          "value": "rqqeErpASHVQXHDd",
+          "label": {
+            "en": "French (France) · Baptiste — male, middle-aged",
+            "fr": "Français (France) · Baptiste — homme, d'âge mûr"
+          }
+        },
+        {
+          "value": "ZeSg853xFACESHHI",
+          "label": {
+            "en": "French (France) · Coralie — female, young",
+            "fr": "Français (France) · Coralie — femme, jeune"
+          }
+        },
+        {
+          "value": "Vvakv7iWZCUrBooR",
+          "label": {
+            "en": "French (France) · Hélène — female, senior",
+            "fr": "Français (France) · Hélène — femme, senior"
+          }
+        },
+        {
+          "value": "YKeBw3OV1RgpdhLh",
+          "label": {
+            "en": "French (France) · Jules — male, adult",
+            "fr": "Français (France) · Jules — homme, adulte"
+          }
+        },
+        {
+          "value": "4iKxBtHBRzr1YOph",
+          "label": {
+            "en": "French (France) · Lilou — female, young",
+            "fr": "Français (France) · Lilou — femme, jeune"
+          }
+        },
+        {
+          "value": "LIv4NaG8ay4Mhqtd",
+          "label": {
+            "en": "French (France) · Lucien — male, middle-aged",
+            "fr": "Français (France) · Lucien — homme, d'âge mûr"
+          }
+        },
+        {
+          "value": "s048cR1l2Jmu4k3B",
+          "label": {
+            "en": "French (France) · Maëlys — female, young",
+            "fr": "Français (France) · Maëlys — femme, jeune"
+          }
+        },
+        {
+          "value": "biuhvu17TxVKOcyy",
+          "label": {
+            "en": "French (France) · Marius — male, adult",
+            "fr": "Français (France) · Marius — homme, adulte"
+          }
+        },
+        {
+          "value": "qtPlUYAZ4EJDuWMm",
+          "label": {
+            "en": "French (France) · Ninon — female, middle-aged",
+            "fr": "Français (France) · Ninon — femme, d'âge mûr"
+          }
+        },
+        {
+          "value": "FXxJ9mANRq6BCTX5",
+          "label": {
+            "en": "French (France) · Noémie — female, young",
+            "fr": "Français (France) · Noémie — femme, jeune"
+          }
+        },
+        {
+          "value": "TUk4X11S6UytB3G6",
+          "label": {
+            "en": "French (France) · Orianne — female, middle-aged",
+            "fr": "Français (France) · Orianne — femme, d'âge mûr"
+          }
+        },
+        {
+          "value": "YhIHaAfQ0cQPDV9R",
+          "label": {
+            "en": "French (France) · Solène — female, young",
+            "fr": "Français (France) · Solène — femme, jeune"
+          }
+        },
+        {
+          "value": "0fvH6XAKvA748v2v",
+          "label": {
+            "en": "French (France) · Tiphaine — female, middle-aged",
+            "fr": "Français (France) · Tiphaine — femme, d'âge mûr"
+          }
+        },
+        {
+          "value": "dGyGDKo2osj7h3s7",
+          "label": {
+            "en": "English · Azgorath — character",
+            "fr": "Anglais · Azgorath — personnage"
+          }
+        },
+        {
+          "value": "xPDpsV3F592srkjA",
+          "label": {
+            "en": "English · Captain Silas Blackwater — character",
+            "fr": "Anglais · Captain Silas Blackwater — personnage"
+          }
+        },
+        {
+          "value": "QXNr0SvkukLB4wPq",
+          "label": {
+            "en": "English · Fairy Godmother — character",
+            "fr": "Anglais · Fairy Godmother — personnage"
+          }
+        },
+        {
+          "value": "cXoIXJ2llS8S0WOW",
+          "label": {
+            "en": "English · Fennick the Young Elf — character",
+            "fr": "Anglais · Fennick the Young Elf — personnage"
+          }
+        },
+        {
+          "value": "cYtsRSxV5q9IMehn",
+          "label": {
+            "en": "English · Grub the Ogre — character",
+            "fr": "Anglais · Grub the Ogre — personnage"
+          }
+        },
+        {
+          "value": "gSgG5Tor0GPEnqzC",
+          "label": {
+            "en": "English · Master Aldric — character",
+            "fr": "Anglais · Master Aldric — personnage"
+          }
+        },
+        {
+          "value": "nOykTmcH9ydsGGIc",
+          "label": {
+            "en": "English · Morwenna of the Deep — character",
+            "fr": "Anglais · Morwenna of the Deep — personnage"
+          }
+        },
+        {
+          "value": "lX3LavMNdlIbgEHH",
+          "label": {
+            "en": "English · Old Mortlake — character",
+            "fr": "Anglais · Old Mortlake — personnage"
+          }
+        },
+        {
+          "value": "y2eiKxtQo2B67deU",
+          "label": {
+            "en": "English · Sir Bramwell — character",
+            "fr": "Anglais · Sir Bramwell — personnage"
+          }
+        },
+        {
+          "value": "NIWoEurJHMJjyUTe",
+          "label": {
+            "en": "English · The Snow Queen — character",
+            "fr": "Anglais · The Snow Queen — personnage"
+          }
+        },
+        {
+          "value": "GXaSqMEmOg12OIYb",
+          "label": {
+            "en": "English · The Thing Under the Stairs — character",
+            "fr": "Anglais · The Thing Under the Stairs — personnage"
+          }
+        },
+        {
+          "value": "xO8xQo3BrB8FuI6J",
+          "label": {
+            "en": "English · Vyrmathrax the Ancient — character",
+            "fr": "Anglais · Vyrmathrax the Ancient — personnage"
+          }
+        },
+        {
+          "value": "X6NceqF285Gr04gb",
+          "label": {
+            "en": "English (UK) · Alfie — male, young adult",
+            "fr": "Anglais (Royaume-Uni) · Alfie — homme, jeune adulte"
+          }
+        },
+        {
+          "value": "gfP44RlHwr2kEwk7",
+          "label": {
+            "en": "English (UK) · Bryony — female, middle-aged",
+            "fr": "Anglais (Royaume-Uni) · Bryony — femme, d'âge mûr"
+          }
+        },
+        {
+          "value": "zUCxzrOrugTSis03",
+          "label": {
+            "en": "English (UK) · Edwin — male, middle-aged",
+            "fr": "Anglais (Royaume-Uni) · Edwin — homme, d'âge mûr"
+          }
+        },
+        {
+          "value": "y9bQqIDnyxwqK01t",
+          "label": {
+            "en": "English (UK) · Elodie-Rose — female, young",
+            "fr": "Anglais (Royaume-Uni) · Elodie-Rose — femme, jeune"
+          }
+        },
+        {
+          "value": "GgfEkEJtxZR7gnpy",
+          "label": {
+            "en": "English (UK) · Freya — female, young",
+            "fr": "Anglais (Royaume-Uni) · Freya — femme, jeune"
+          }
+        },
+        {
+          "value": "YyKcxPG7iIgS3jsK",
+          "label": {
+            "en": "English (UK) · Hugh — male, middle-aged",
+            "fr": "Anglais (Royaume-Uni) · Hugh — homme, d'âge mûr"
+          }
+        },
+        {
+          "value": "gDT1nz7Ie36ZhL-C",
+          "label": {
+            "en": "English (UK) · Imogen — female, adult",
+            "fr": "Anglais (Royaume-Uni) · Imogen — femme, adulte"
+          }
+        },
+        {
+          "value": "m9MxpY6IUGXtWp76",
+          "label": {
+            "en": "English (UK) · Lottie — female, young adult",
+            "fr": "Anglais (Royaume-Uni) · Lottie — femme, jeune adulte"
+          }
+        },
+        {
+          "value": "6PWnV0Nq4wu7RVBT",
+          "label": {
+            "en": "English (UK) · Maeve — female, adult",
+            "fr": "Anglais (Royaume-Uni) · Maeve — femme, adulte"
+          }
+        },
+        {
+          "value": "uem82D50GRv2Dwma",
+          "label": {
+            "en": "English (UK) · Pippa — female, adult",
+            "fr": "Anglais (Royaume-Uni) · Pippa — femme, adulte"
+          }
+        },
+        {
+          "value": "JOW0vchyswkQUMDS",
+          "label": {
+            "en": "English (UK) · Spencer — male, middle-aged",
+            "fr": "Anglais (Royaume-Uni) · Spencer — homme, d'âge mûr"
+          }
+        },
+        {
+          "value": "Zn7g6NxLqXlJb7Qi",
+          "label": {
+            "en": "English (UK) · Teddy — male, young adult",
+            "fr": "Anglais (Royaume-Uni) · Teddy — homme, jeune adulte"
+          }
+        },
+        {
+          "value": "dME3IWyZBvmh1n1q",
+          "label": {
+            "en": "English (UK) · Toby — male, adult",
+            "fr": "Anglais (Royaume-Uni) · Toby — homme, adulte"
+          }
+        },
+        {
+          "value": "nGzMHMPAWGaJFHOo",
+          "label": {
+            "en": "English (US) · Delia — female, middle-aged",
+            "fr": "Anglais (États-Unis) · Delia — femme, d'âge mûr"
+          }
+        },
+        {
+          "value": "LMDIYE0Oa377Qh6Z",
+          "label": {
+            "en": "English (US) · Easton — male, young adult",
+            "fr": "Anglais (États-Unis) · Easton — homme, jeune adulte"
+          }
+        },
+        {
+          "value": "vjFyp2BcCyTlUmYb",
+          "label": {
+            "en": "English (US) · Everly — female, middle-aged",
+            "fr": "Anglais (États-Unis) · Everly — femme, d'âge mûr"
+          }
+        },
+        {
+          "value": "bXwrkHhURL1VFJdG",
+          "label": {
+            "en": "English (US) · Hadley — female, middle-aged",
+            "fr": "Anglais (États-Unis) · Hadley — femme, d'âge mûr"
+          }
+        },
+        {
+          "value": "4SZHfMpw-p46Ywgs",
+          "label": {
+            "en": "English (US) · Harper — female, adult",
+            "fr": "Anglais (États-Unis) · Harper — femme, adulte"
+          }
+        },
+        {
+          "value": "NIWIOv5vTi5eRMj8",
+          "label": {
+            "en": "English (US) · Juniper — female, young adult",
+            "fr": "Anglais (États-Unis) · Juniper — femme, jeune adulte"
+          }
+        },
+        {
+          "value": "40QrMVgAxFiUnP9f",
+          "label": {
+            "en": "English (US) · Micah — male, young adult",
+            "fr": "Anglais (États-Unis) · Micah — homme, jeune adulte"
+          }
+        },
+        {
+          "value": "d9XCyhjo4JhkHF1d",
+          "label": {
+            "en": "English (US) · Miles — male, young adult",
+            "fr": "Anglais (États-Unis) · Miles — homme, jeune adulte"
+          }
+        },
+        {
+          "value": "qIxlZ7Ei8KvWlyQH",
+          "label": {
+            "en": "English (US) · Preston — male, middle-aged",
+            "fr": "Anglais (États-Unis) · Preston — homme, d'âge mûr"
+          }
+        },
+        {
+          "value": "_6Aslh2DxfmnRLmP",
+          "label": {
+            "en": "English (US) · Russell — male, adult",
+            "fr": "Anglais (États-Unis) · Russell — homme, adulte"
+          }
+        },
+        {
+          "value": "0zLApsZfVLLNaEGl",
+          "label": {
+            "en": "English (US) · Trevor — male, middle-aged",
+            "fr": "Anglais (États-Unis) · Trevor — homme, d'âge mûr"
+          }
+        },
+        {
+          "value": "NbpkqMVS3CJeq2j8",
+          "label": {
+            "en": "English (US) · Zoey — female, adult",
+            "fr": "Anglais (États-Unis) · Zoey — femme, adulte"
+          }
+        },
+        {
+          "value": "p6Uutkyi3j2iNAUu",
+          "label": {
+            "en": "German (Germany) · Annika — female, adult",
+            "fr": "Allemand (Allemagne) · Annika — femme, adulte"
+          }
+        },
+        {
+          "value": "3ZKKapPOvuWFcw9f",
+          "label": {
+            "en": "German (Germany) · Anton — male, adult",
+            "fr": "Allemand (Allemagne) · Anton — homme, adulte"
+          }
+        },
+        {
+          "value": "yyS1KYWs6mXoEw7D",
+          "label": {
+            "en": "German (Germany) · Henrik — male, adult",
+            "fr": "Allemand (Allemagne) · Henrik — homme, adulte"
+          }
+        },
+        {
+          "value": "4Mn9VfG2wsLLEzi5",
+          "label": {
+            "en": "German (Germany) · Jette — female, young",
+            "fr": "Allemand (Allemagne) · Jette — femme, jeune"
+          }
+        },
+        {
+          "value": "yadpmqsHVrYC0NJp",
+          "label": {
+            "en": "German (Germany) · Josefine — female, middle-aged",
+            "fr": "Allemand (Allemagne) · Josefine — femme, d'âge mûr"
+          }
+        },
+        {
+          "value": "MxhgvuHuUER7qjmL",
+          "label": {
+            "en": "German (Germany) · Jule — female, young adult",
+            "fr": "Allemand (Allemagne) · Jule — femme, jeune adulte"
+          }
+        },
+        {
+          "value": "20zdyYrQPzKlCwkk",
+          "label": {
+            "en": "German (Germany) · Leon — male, adult",
+            "fr": "Allemand (Allemagne) · Leon — homme, adulte"
+          }
+        },
+        {
+          "value": "MOrDPn052KUlnKXk",
+          "label": {
+            "en": "German (Germany) · Lotta — female, young adult",
+            "fr": "Allemand (Allemagne) · Lotta — femme, jeune adulte"
+          }
+        },
+        {
+          "value": "Kf5m22mROozoMWj3",
+          "label": {
+            "en": "German (Germany) · Mats — male, adult",
+            "fr": "Allemand (Allemagne) · Mats — homme, adulte"
+          }
+        },
+        {
+          "value": "R3uU1GTAZJotUhUs",
+          "label": {
+            "en": "German (Germany) · Mika — male, young adult",
+            "fr": "Allemand (Allemagne) · Mika — homme, jeune adulte"
+          }
+        },
+        {
+          "value": "Xn9xDzqSSr4xGTNg",
+          "label": {
+            "en": "German (Germany) · Mirko — male, young adult",
+            "fr": "Allemand (Allemagne) · Mirko — homme, jeune adulte"
+          }
+        },
+        {
+          "value": "2A2fFf8SkDEJ8nzx",
+          "label": {
+            "en": "German (Germany) · Nele — female, middle-aged",
+            "fr": "Allemand (Allemagne) · Nele — femme, d'âge mûr"
+          }
+        },
+        {
+          "value": "Adoh4wA9tp5QXJi9",
+          "label": {
+            "en": "German (Germany) · Svea — female, young adult",
+            "fr": "Allemand (Allemagne) · Svea — femme, jeune adulte"
+          }
+        },
+        {
+          "value": "u2UscyAnHilpiwmf",
+          "label": {
+            "en": "Spanish (Spain) · Alba — female, young",
+            "fr": "Espagnol (Espagne) · Alba — femme, jeune"
+          }
+        },
+        {
+          "value": "4701YgRXjkBcg6sL",
+          "label": {
+            "en": "Spanish (Spain) · Alicia — female, middle-aged",
+            "fr": "Espagnol (Espagne) · Alicia — femme, d'âge mûr"
+          }
+        },
+        {
+          "value": "tIjCgP8v3RY8UpgM",
+          "label": {
+            "en": "Spanish (Spain) · Borja — male, young adult",
+            "fr": "Espagnol (Espagne) · Borja — homme, jeune adulte"
+          }
+        },
+        {
+          "value": "c9wqBDmQiBie5q6Y",
+          "label": {
+            "en": "Spanish (Spain) · Candela — female, young",
+            "fr": "Espagnol (Espagne) · Candela — femme, jeune"
+          }
+        },
+        {
+          "value": "rmLBOdHrfkFym9MM",
+          "label": {
+            "en": "Spanish (Spain) · Celia — female, young adult",
+            "fr": "Espagnol (Espagne) · Celia — femme, jeune adulte"
+          }
+        },
+        {
+          "value": "FaLVVqpFQcDOtq45",
+          "label": {
+            "en": "Spanish (Spain) · Guillermo — male, middle-aged",
+            "fr": "Espagnol (Espagne) · Guillermo — homme, d'âge mûr"
+          }
+        },
+        {
+          "value": "t-_TS1e-0GzDAX02",
+          "label": {
+            "en": "Spanish (Spain) · Iker — male, adult",
+            "fr": "Espagnol (Espagne) · Iker — homme, adulte"
+          }
+        },
+        {
+          "value": "Ejb29qHnSOK0cIHY",
+          "label": {
+            "en": "Spanish (Spain) · Izan — male, young adult",
+            "fr": "Espagnol (Espagne) · Izan — homme, jeune adulte"
+          }
+        },
+        {
+          "value": "3p0eIGbkmny71GlA",
+          "label": {
+            "en": "Spanish (Spain) · Lucía-Sol — female, young",
+            "fr": "Espagnol (Espagne) · Lucía-Sol — femme, jeune"
+          }
+        },
+        {
+          "value": "jvPx8j8zLGQ3utZz",
+          "label": {
+            "en": "Spanish (Spain) · Marcos — male, adult",
+            "fr": "Espagnol (Espagne) · Marcos — homme, adulte"
+          }
+        },
+        {
+          "value": "EQcQFGkYfMn5YJgx",
+          "label": {
+            "en": "Spanish (Spain) · Nerea — female, middle-aged",
+            "fr": "Espagnol (Espagne) · Nerea — femme, d'âge mûr"
+          }
+        },
+        {
+          "value": "b6FvJAiokjdqIti4",
+          "label": {
+            "en": "Spanish (Spain) · Noa — female, young",
+            "fr": "Espagnol (Espagne) · Noa — femme, jeune"
+          }
+        },
+        {
+          "value": "fghJGlv90qu8OJ36",
+          "label": {
+            "en": "Spanish (Spain) · Nuno — male, middle-aged",
+            "fr": "Espagnol (Espagne) · Nuno — homme, d'âge mûr"
+          }
+        },
+        {
+          "value": "ax7dW1XB0eiMfHgO",
+          "label": {
+            "en": "Spanish (Mexico) · Aldo — male, young adult",
+            "fr": "Espagnol (Mexique) · Aldo — homme, jeune adulte"
+          }
+        },
+        {
+          "value": "KJpIQlbYrZPA4aLq",
+          "label": {
+            "en": "Spanish (Mexico) · Azucena — female, senior",
+            "fr": "Espagnol (Mexique) · Azucena — femme, senior"
+          }
+        },
+        {
+          "value": "evfxKSxpDIhmsNoq",
+          "label": {
+            "en": "Spanish (Mexico) · Danae — female, young adult",
+            "fr": "Espagnol (Mexique) · Danae — femme, jeune adulte"
+          }
+        },
+        {
+          "value": "qG5BXOJYrKEnXLIX",
+          "label": {
+            "en": "Spanish (Mexico) · Jimena — female, young adult",
+            "fr": "Espagnol (Mexique) · Jimena — femme, jeune adulte"
+          }
+        },
+        {
+          "value": "F05gqkzX7WhKVpSL",
+          "label": {
+            "en": "Spanish (Mexico) · Lalo — male, young adult",
+            "fr": "Espagnol (Mexique) · Lalo — homme, jeune adulte"
+          }
+        },
+        {
+          "value": "BkuASiOJRrJEB5qA",
+          "label": {
+            "en": "Spanish (Mexico) · Leonel — male, middle-aged",
+            "fr": "Espagnol (Mexique) · Leonel — homme, d'âge mûr"
+          }
+        },
+        {
+          "value": "PwgPEaweQILZdGc4",
+          "label": {
+            "en": "Spanish (Mexico) · Nico — male, young adult",
+            "fr": "Espagnol (Mexique) · Nico — homme, jeune adulte"
+          }
+        },
+        {
+          "value": "Sx8m6WdXBG06zwZT",
+          "label": {
+            "en": "Spanish (Mexico) · Rebeca — female, young adult",
+            "fr": "Espagnol (Mexique) · Rebeca — femme, jeune adulte"
+          }
+        },
+        {
+          "value": "s58clrg2fe0MO7Y-",
+          "label": {
+            "en": "Spanish (Mexico) · Regina — female, adult",
+            "fr": "Espagnol (Mexique) · Regina — femme, adulte"
+          }
+        },
+        {
+          "value": "G5HLUsQd659UtRe7",
+          "label": {
+            "en": "Spanish (Mexico) · Ulises — male, middle-aged",
+            "fr": "Espagnol (Mexique) · Ulises — homme, d'âge mûr"
+          }
+        },
+        {
+          "value": "VDwnGxAo68C8U8vC",
+          "label": {
+            "en": "Spanish (Mexico) · Ximena — female, adult",
+            "fr": "Espagnol (Mexique) · Ximena — femme, adulte"
+          }
+        },
+        {
+          "value": "ALczEazoF4n6PmGl",
+          "label": {
+            "en": "Spanish (Mexico) · Yael — male, young adult",
+            "fr": "Espagnol (Mexique) · Yael — homme, jeune adulte"
+          }
+        },
+        {
+          "value": "sGCMzFIA53ppIngM",
+          "label": {
+            "en": "Portuguese (Brazil) · Clarice — female, senior",
+            "fr": "Portugais (Brésil) · Clarice — femme, senior"
+          }
+        },
+        {
+          "value": "NuUr_x5V90hSHzCJ",
+          "label": {
+            "en": "Portuguese (Brazil) · Davi — male, adult",
+            "fr": "Portugais (Brésil) · Davi — homme, adulte"
+          }
+        },
+        {
+          "value": "K8mj96kYHMy8q3Hb",
+          "label": {
+            "en": "Portuguese (Brazil) · Débora — female, middle-aged",
+            "fr": "Portugais (Brésil) · Débora — femme, d'âge mûr"
+          }
+        },
+        {
+          "value": "gOc90Rjmv5CobHCj",
+          "label": {
+            "en": "Portuguese (Brazil) · Flávia — female, middle-aged",
+            "fr": "Portugais (Brésil) · Flávia — femme, d'âge mûr"
+          }
+        },
+        {
+          "value": "l7520SIXi14iEamd",
+          "label": {
+            "en": "Portuguese (Brazil) · Igor — male, middle-aged",
+            "fr": "Portugais (Brésil) · Igor — homme, d'âge mûr"
+          }
+        },
+        {
+          "value": "CtNvKUUMrx1h56ih",
+          "label": {
+            "en": "Portuguese (Brazil) · Isadora — female, young",
+            "fr": "Portugais (Brésil) · Isadora — femme, jeune"
+          }
+        },
+        {
+          "value": "6HftnVU1XqVBJS8t",
+          "label": {
+            "en": "Portuguese (Brazil) · Kauã — male, young adult",
+            "fr": "Portugais (Brésil) · Kauã — homme, jeune adulte"
+          }
+        },
+        {
+          "value": "KgC2Nqnjj48NUiyV",
+          "label": {
+            "en": "Portuguese (Brazil) · Manuela-Lu — female, young",
+            "fr": "Portugais (Brésil) · Manuela-Lu — femme, jeune"
+          }
+        },
+        {
+          "value": "qDeAnE4L4bk0BRz1",
+          "label": {
+            "en": "Portuguese (Brazil) · Marcelo — male, middle-aged",
+            "fr": "Portugais (Brésil) · Marcelo — homme, d'âge mûr"
+          }
+        },
+        {
+          "value": "JYtmeaysoaR0Wybf",
+          "label": {
+            "en": "Portuguese (Brazil) · Otávio — male, senior",
+            "fr": "Portugais (Brésil) · Otávio — homme, senior"
+          }
+        },
+        {
+          "value": "6k6cRt7QJfm5ChrH",
+          "label": {
+            "en": "Portuguese (Brazil) · Rafaela — female, young",
+            "fr": "Portugais (Brésil) · Rafaela — femme, jeune"
+          }
+        },
+        {
+          "value": "mWgyMRkFED70QxQv",
+          "label": {
+            "en": "Portuguese (Brazil) · Vitor — male, middle-aged",
+            "fr": "Portugais (Brésil) · Vitor — homme, d'âge mûr"
+          }
+        },
+        {
+          "value": "custom",
+          "label": {
+            "en": "Custom voice (Gradium Studio, see below)",
+            "fr": "Voix personnalisée (Gradium Studio, voir ci-dessous)"
+          }
+        }
+      ]
+    },
+    {
+      "key": "custom_voice",
+      "type": "string",
+      "label": { "en": "Custom voice", "fr": "Voix personnalisée" },
+      "description": {
+        "en": "Used when the voice is \"Custom voice\": the ID of a voice designed or cloned in Gradium Studio (the \"List my Gradium Studio voices\" action below shows them), or the https URL of a Phonon voice file (.safetensors).",
+        "fr": "Utilisé quand la voix est « Voix personnalisée » : l'identifiant d'une voix créée ou clonée dans Gradium Studio (l'action « Lister mes voix Gradium Studio » ci-dessous les affiche), ou l'URL https d'un fichier de voix Phonon (.safetensors)."
+      },
+      "placeholder": { "en": "e.g. NbpkqMVS3CJeq2j8", "fr": "ex. NbpkqMVS3CJeq2j8" }
+    },
+    {
+      "key": "gradium_api_key",
+      "type": "secret",
+      "label": { "en": "Gradium API key", "fr": "Clé API Gradium" },
+      "description": {
+        "en": "Only for a custom voice given by its ID: create a key in Gradium Studio. The voice is downloaded once, then works offline.",
+        "fr": "Uniquement pour une voix personnalisée donnée par son identifiant : créez une clé dans Gradium Studio. La voix est téléchargée une fois, puis fonctionne hors ligne."
+      }
+    },
+    {
+      "key": "advanced",
+      "type": "section",
+      "label": { "en": "Advanced", "fr": "Avancé" },
+      "description": {
+        "en": "The defaults suit most installations.",
+        "fr": "Les valeurs par défaut conviennent à la plupart des installations."
+      }
+    },
+    {
+      "key": "speech_rate",
+      "type": "select",
+      "label": { "en": "Speech rate", "fr": "Débit de parole" },
+      "default": "normal",
+      "options": [
+        { "value": "slower", "label": { "en": "Slower", "fr": "Plus lent" } },
+        { "value": "normal", "label": { "en": "Normal", "fr": "Normal" } },
+        { "value": "faster", "label": { "en": "Faster", "fr": "Plus rapide" } }
+      ]
+    },
+    {
+      "key": "quant",
+      "type": "select",
+      "label": { "en": "Model weights", "fr": "Poids du modèle" },
+      "description": {
+        "en": "q8 is smaller and faster on a CPU, with the same voice quality for most uses.",
+        "fr": "q8 est plus léger et plus rapide sur un processeur, pour une qualité de voix équivalente dans la plupart des usages."
+      },
+      "default": "q8",
+      "options": [
+        { "value": "q8", "label": { "en": "q8 (recommended)", "fr": "q8 (recommandé)" } },
+        {
+          "value": "f32",
+          "label": { "en": "f32 (larger, slower)", "fr": "f32 (plus lourd, plus lent)" }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "key": "test_voice",
+      "label": { "en": "Test the voice", "fr": "Tester la voix" },
+      "description": {
+        "en": "Synthesizes a sentence with the current model and voice, and reports how long it took. Choose Phonon TTS as the voice of Gladys (Integrations › Artificial Intelligence) to hear it on your speakers.",
+        "fr": "Synthétise une phrase avec le modèle et la voix actuels, et indique le temps de génération. Choisissez Phonon TTS comme voix de Gladys (Intégrations › Intelligence artificielle) pour l'entendre sur vos enceintes."
+      },
+      "timeout_seconds": 60,
+      "fields": [
+        {
+          "key": "text",
+          "type": "string",
+          "label": { "en": "Text (optional)", "fr": "Texte (facultatif)" },
+          "placeholder": {
+            "en": "Hello, I am the voice of Gladys.",
+            "fr": "Bonjour, je suis la voix de Gladys."
+          }
+        }
+      ]
+    },
+    {
+      "key": "list_gradium_voices",
+      "label": { "en": "List my Gradium Studio voices", "fr": "Lister mes voix Gradium Studio" },
+      "description": {
+        "en": "Shows the ID of every voice of your Gradium account (needs the Gradium API key, saved).",
+        "fr": "Affiche l'identifiant de chaque voix de votre compte Gradium (nécessite la clé API Gradium, enregistrée)."
+      },
+      "timeout_seconds": 30
+    },
+    {
+      "key": "restart_engine",
+      "label": { "en": "Restart the speech engine", "fr": "Relancer le moteur vocal" },
+      "description": {
+        "en": "Retries the download and restarts the engine, e.g. after a network failure.",
+        "fr": "Relance le téléchargement et redémarre le moteur, par exemple après une panne réseau."
+      },
+      "timeout_seconds": 30
+    }
+  ]
+}

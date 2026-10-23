@@ -1,0 +1,1740 @@
+{
+  "repo": "gradium/phonon-voices",
+  "sha": "0ee17205f254b5abc43b266c8a0f215565c352f7",
+  "voices": [
+    {
+      "voice_id": "aXMVwiUhITMrwPzd",
+      "name": "Arnaud",
+      "language": "fr",
+      "locale": "fr-fr",
+      "gender": "male",
+      "age": "Middle-age",
+      "description": "Low and firm, quick to the point, consonants holding their shape at phone bandwidth.",
+      "filename": "voices/aXMVwiUhITMrwPzd.safetensors",
+      "size": 256136,
+      "sha256": "22421f1fbb25d325eabc351500fed2e92c53b54facc4bc97ba3bc6cc6e75e42c",
+      "samples": {
+        "40m": "samples/40m/fr/fr-fr/male/2_arnaud_aXMVwiUhITMrwPzd/happy_01.ogg",
+        "31m": "samples/31m/fr/fr-fr/male/2_arnaud_aXMVwiUhITMrwPzd/happy_01.ogg",
+        "default": "samples/fr/fr-fr/male/2_arnaud_aXMVwiUhITMrwPzd.ogg"
+      }
+    },
+    {
+      "voice_id": "Tek4tJXiX6_yvXq7",
+      "name": "Augustin",
+      "language": "fr",
+      "locale": "fr-fr",
+      "gender": "male",
+      "age": "Adult",
+      "description": "A curious, animated French adult voice that lights up when sharing an unexpected fact. Perfect for geeky explainers and trivia-driven dialogue.",
+      "filename": "voices/Tek4tJXiX6_yvXq7.safetensors",
+      "size": 256136,
+      "sha256": "0106f9a0d53685471695a76827f7912e6c890f21fea10b5e5160379da38ffe5b",
+      "samples": {
+        "40m": "samples/40m/fr/fr-fr/male/1_augustin_Tek4tJXiX6_yvXq7/happy_01.ogg",
+        "31m": "samples/31m/fr/fr-fr/male/1_augustin_Tek4tJXiX6_yvXq7/happy_01.ogg",
+        "default": "samples/fr/fr-fr/male/1_augustin_Tek4tJXiX6_yvXq7.ogg"
+      }
+    },
+    {
+      "voice_id": "rqqeErpASHVQXHDd",
+      "name": "Baptiste",
+      "language": "fr",
+      "locale": "fr-fr",
+      "gender": "male",
+      "age": "Middle-age",
+      "description": "Lively and expressive, with pitch that lifts and dips across a phrase and a playful edge to every line.",
+      "filename": "voices/rqqeErpASHVQXHDd.safetensors",
+      "size": 256136,
+      "sha256": "cce882370d25a3c4d29cb226af218a44274674805e7091447d27d3ad61bb25b3",
+      "samples": {
+        "40m": "samples/40m/fr/fr-fr/male/4_baptiste_rqqeErpASHVQXHDd/happy_01.ogg",
+        "31m": "samples/31m/fr/fr-fr/male/4_baptiste_rqqeErpASHVQXHDd/happy_01.ogg",
+        "default": "samples/fr/fr-fr/male/4_baptiste_rqqeErpASHVQXHDd.ogg"
+      }
+    },
+    {
+      "voice_id": "ZeSg853xFACESHHI",
+      "name": "Coralie",
+      "language": "fr",
+      "locale": "fr-fr",
+      "gender": "female",
+      "age": "Young",
+      "description": "A young Parisian voice, sweet and airy with fast, giggly girly charm, a bubbly assistant who makes every interaction feel light.",
+      "filename": "voices/ZeSg853xFACESHHI.safetensors",
+      "size": 256136,
+      "sha256": "21dd67c10f307aa48e1187f48159bb3d41b07d0cd17a3e6366efd508e6fe83a6",
+      "samples": {
+        "40m": "samples/40m/fr/fr-fr/female/2_coralie_ZeSg853xFACESHHI/happy_01.ogg",
+        "31m": "samples/31m/fr/fr-fr/female/2_coralie_ZeSg853xFACESHHI/happy_01.ogg",
+        "default": "samples/fr/fr-fr/female/2_coralie_ZeSg853xFACESHHI.ogg"
+      }
+    },
+    {
+      "voice_id": "Vvakv7iWZCUrBooR",
+      "name": "Hélène",
+      "language": "fr",
+      "locale": "fr-fr",
+      "gender": "female",
+      "age": "Older Adult",
+      "description": "Deep and resonant, carrying authority through steadiness rather than volume, with diction that survives raised playback speed.",
+      "filename": "voices/Vvakv7iWZCUrBooR.safetensors",
+      "size": 256136,
+      "sha256": "a8c97074fdb4044fc8da2873bdccd8b2a64beeedab859d241d5fc11c0c400aad",
+      "samples": {
+        "40m": "samples/40m/fr/fr-fr/female/9_helene_Vvakv7iWZCUrBooR/happy_01.ogg",
+        "31m": "samples/31m/fr/fr-fr/female/9_helene_Vvakv7iWZCUrBooR/happy_01.ogg",
+        "default": "samples/fr/fr-fr/female/9_helene_Vvakv7iWZCUrBooR.ogg"
+      }
+    },
+    {
+      "voice_id": "YKeBw3OV1RgpdhLh",
+      "name": "Jules",
+      "language": "fr",
+      "locale": "fr-fr",
+      "gender": "male",
+      "age": "Adult",
+      "description": "A lively, expressive French adult voice that lights up around topics it loves. Great for animated recommendations and high-energy dialogue.",
+      "filename": "voices/YKeBw3OV1RgpdhLh.safetensors",
+      "size": 256136,
+      "sha256": "16c1df0d46be869159d4a40c81b888eaa8dbc494045e57b24d293384149f008e",
+      "samples": {
+        "40m": "samples/40m/fr/fr-fr/male/3_jules_YKeBw3OV1RgpdhLh/happy_01.ogg",
+        "31m": "samples/31m/fr/fr-fr/male/3_jules_YKeBw3OV1RgpdhLh/happy_01.ogg",
+        "default": "samples/fr/fr-fr/male/3_jules_YKeBw3OV1RgpdhLh.ogg"
+      }
+    },
+    {
+      "voice_id": "4iKxBtHBRzr1YOph",
+      "name": "Lilou",
+      "language": "fr",
+      "locale": "fr-fr",
+      "gender": "female",
+      "age": "Young",
+      "description": "A young Parisian voice, buoyant and tender with rippling laughter, a light-hearted support voice that smiles while it helps.",
+      "filename": "voices/4iKxBtHBRzr1YOph.safetensors",
+      "size": 256136,
+      "sha256": "c93483af64a9dd990e42264d2b6bb68909fcdff66873945acf7701e501d6e849",
+      "samples": {
+        "40m": "samples/40m/fr/fr-fr/female/8_lilou_4iKxBtHBRzr1YOph/happy_01.ogg",
+        "31m": "samples/31m/fr/fr-fr/female/8_lilou_4iKxBtHBRzr1YOph/happy_01.ogg",
+        "default": "samples/fr/fr-fr/female/8_lilou_4iKxBtHBRzr1YOph.ogg"
+      }
+    },
+    {
+      "voice_id": "LIv4NaG8ay4Mhqtd",
+      "name": "Lucien",
+      "language": "fr",
+      "locale": "fr-fr",
+      "gender": "male",
+      "age": "Middle-age",
+      "description": "Rounded and settled, phrases landing softly, with an apology that sounds genuinely meant and good news that sounds like good news.",
+      "filename": "voices/LIv4NaG8ay4Mhqtd.safetensors",
+      "size": 256136,
+      "sha256": "4f7f904c976c0b493e9d42654dc81d4f9e686b986fbb3a7d511a7dcc41c7dea6",
+      "samples": {
+        "40m": "samples/40m/fr/fr-fr/male/5_lucien_LIv4NaG8ay4Mhqtd/happy_01.ogg",
+        "31m": "samples/31m/fr/fr-fr/male/5_lucien_LIv4NaG8ay4Mhqtd/happy_01.ogg",
+        "default": "samples/fr/fr-fr/male/5_lucien_LIv4NaG8ay4Mhqtd.ogg"
+      }
+    },
+    {
+      "voice_id": "s048cR1l2Jmu4k3B",
+      "name": "Maëlys",
+      "language": "fr",
+      "locale": "fr-fr",
+      "gender": "female",
+      "age": "Young",
+      "description": "A young French voice, energetic and enthusiastic with a welcoming, upbeat delivery, sparky and to the point for responsive support.",
+      "filename": "voices/s048cR1l2Jmu4k3B.safetensors",
+      "size": 256136,
+      "sha256": "f7b80c03210e3fd736de6596586305e9b7eb0e615047dd1cbb1b58fc3f92985f",
+      "samples": {
+        "40m": "samples/40m/fr/fr-fr/female/4_maelys_s048cR1l2Jmu4k3B/happy_01.ogg",
+        "31m": "samples/31m/fr/fr-fr/female/4_maelys_s048cR1l2Jmu4k3B/happy_01.ogg",
+        "default": "samples/fr/fr-fr/female/4_maelys_s048cR1l2Jmu4k3B.ogg"
+      }
+    },
+    {
+      "voice_id": "biuhvu17TxVKOcyy",
+      "name": "Marius",
+      "language": "fr",
+      "locale": "fr-fr",
+      "gender": "male",
+      "age": "Adult",
+      "description": "An energetic, well-poised French adult voice with the confident assurance of a natural closer. Ideal for sales pitches and high-conviction content.",
+      "filename": "voices/biuhvu17TxVKOcyy.safetensors",
+      "size": 256136,
+      "sha256": "a859356200a33faf75c591d24fc0fbb998aa66b53c2120f392ef6305d824ec9d",
+      "samples": {
+        "40m": "samples/40m/fr/fr-fr/male/6_marius_biuhvu17TxVKOcyy/happy_01.ogg",
+        "31m": "samples/31m/fr/fr-fr/male/6_marius_biuhvu17TxVKOcyy/happy_01.ogg",
+        "default": "samples/fr/fr-fr/male/6_marius_biuhvu17TxVKOcyy.ogg"
+      }
+    },
+    {
+      "voice_id": "qtPlUYAZ4EJDuWMm",
+      "name": "Ninon",
+      "language": "fr",
+      "locale": "fr-fr",
+      "gender": "female",
+      "age": "Middle-age",
+      "description": "Pitch that moves across a sentence, a rounded mid tone and a sense of humour kept well in check.",
+      "filename": "voices/qtPlUYAZ4EJDuWMm.safetensors",
+      "size": 256136,
+      "sha256": "250af13c97fdc3519ccde9c8d5e1ae1953f8ad365fc7d736aa5eae2ad2e14473",
+      "samples": {
+        "40m": "samples/40m/fr/fr-fr/female/7_ninon_qtPlUYAZ4EJDuWMm/happy_01.ogg",
+        "31m": "samples/31m/fr/fr-fr/female/7_ninon_qtPlUYAZ4EJDuWMm/happy_01.ogg",
+        "default": "samples/fr/fr-fr/female/7_ninon_qtPlUYAZ4EJDuWMm.ogg"
+      }
+    },
+    {
+      "voice_id": "FXxJ9mANRq6BCTX5",
+      "name": "Noémie",
+      "language": "fr",
+      "locale": "fr-fr",
+      "gender": "female",
+      "age": "Young",
+      "description": "A young Parisian voice, warm and expressive with a quick playful pace and delicate high notes, a care specialist who stays bright and witty.",
+      "filename": "voices/FXxJ9mANRq6BCTX5.safetensors",
+      "size": 256136,
+      "sha256": "9f575447f6908727214c2a855e0e33a7c316e9360a0d8b66c6ccaa8f6e15dade",
+      "samples": {
+        "40m": "samples/40m/fr/fr-fr/female/1_noemie_FXxJ9mANRq6BCTX5/happy_01.ogg",
+        "31m": "samples/31m/fr/fr-fr/female/1_noemie_FXxJ9mANRq6BCTX5/happy_01.ogg",
+        "default": "samples/fr/fr-fr/female/1_noemie_FXxJ9mANRq6BCTX5.ogg"
+      }
+    },
+    {
+      "voice_id": "TUk4X11S6UytB3G6",
+      "name": "Orianne",
+      "language": "fr",
+      "locale": "fr-fr",
+      "gender": "female",
+      "age": "Middle-age",
+      "description": "Airy and higher-set, gently buoyant, with sincerity that holds through an apology.",
+      "filename": "voices/TUk4X11S6UytB3G6.safetensors",
+      "size": 256136,
+      "sha256": "cae40431c178258727313c8c4f7c037645ece7fc2f4287644cc7a7138ca4e90c",
+      "samples": {
+        "40m": "samples/40m/fr/fr-fr/female/5_orianne_TUk4X11S6UytB3G6/happy_01.ogg",
+        "31m": "samples/31m/fr/fr-fr/female/5_orianne_TUk4X11S6UytB3G6/happy_01.ogg",
+        "default": "samples/fr/fr-fr/female/5_orianne_TUk4X11S6UytB3G6.ogg"
+      }
+    },
+    {
+      "voice_id": "YhIHaAfQ0cQPDV9R",
+      "name": "Solène",
+      "language": "fr",
+      "locale": "fr-fr",
+      "gender": "female",
+      "age": "Young",
+      "description": "A young French voice, bright and high-pitched, warm and enthusiastic at a lively pace, a receptionist who greets everyone with delight.",
+      "filename": "voices/YhIHaAfQ0cQPDV9R.safetensors",
+      "size": 256136,
+      "sha256": "fbed904e1c25c3410db4adc28b8e27686c9fd9d61353a02a23bcd1a6da054280",
+      "samples": {
+        "40m": "samples/40m/fr/fr-fr/female/6_solene_YhIHaAfQ0cQPDV9R/happy_01.ogg",
+        "31m": "samples/31m/fr/fr-fr/female/6_solene_YhIHaAfQ0cQPDV9R/happy_01.ogg",
+        "default": "samples/fr/fr-fr/female/6_solene_YhIHaAfQ0cQPDV9R.ogg"
+      }
+    },
+    {
+      "voice_id": "0fvH6XAKvA748v2v",
+      "name": "Tiphaine",
+      "language": "fr",
+      "locale": "fr-fr",
+      "gender": "female",
+      "age": "Middle-age",
+      "description": "Rounded, low-set tone with even phrasing and consonants that stay crisp through a handset.",
+      "filename": "voices/0fvH6XAKvA748v2v.safetensors",
+      "size": 256136,
+      "sha256": "5646677e9cf4a517e8cc316f94a34e18fa987e224925d916d6fe13396579b95b",
+      "samples": {
+        "40m": "samples/40m/fr/fr-fr/female/3_tiphaine_0fvH6XAKvA748v2v/happy_01.ogg",
+        "31m": "samples/31m/fr/fr-fr/female/3_tiphaine_0fvH6XAKvA748v2v/happy_01.ogg",
+        "default": "samples/fr/fr-fr/female/3_tiphaine_0fvH6XAKvA748v2v.ogg"
+      }
+    },
+    {
+      "voice_id": "dGyGDKo2osj7h3s7",
+      "name": "Azgorath",
+      "language": "en",
+      "locale": "characters",
+      "gender": null,
+      "age": null,
+      "description": "An enormous ancient demon. A cavernous, impossibly deep bass voice that rumbles like stone grinding in a crypt, with a dry rasping edge and a faint hiss on every s. Calm, slow and amused, never shouting, every syllable set down deliberately, menace held under perfect control.",
+      "filename": "voices/dGyGDKo2osj7h3s7.safetensors",
+      "size": 256136,
+      "sha256": "83900e020c14946426614c6553c5a138ba6277e1aaa69832223bd0f0f8b73893",
+      "samples": {
+        "40m": "samples/40m/en/characters/azgorath_dGyGDKo2osj7h3s7/happy_01.ogg",
+        "31m": "samples/31m/en/characters/azgorath_dGyGDKo2osj7h3s7/happy_01.ogg",
+        "default": "samples/en/characters/azgorath_dGyGDKo2osj7h3s7.ogg"
+      }
+    },
+    {
+      "voice_id": "xPDpsV3F592srkjA",
+      "name": "Captain Silas Blackwater",
+      "language": "en",
+      "locale": "characters",
+      "gender": null,
+      "age": null,
+      "description": "An old British pirate captain from the West Country, around sixty. Deep, gravelly and booming, rolling his Rs, salt-cracked from decades of shouting over gales. Roguish and hearty, with a wicked chuckle under every boast.",
+      "filename": "voices/xPDpsV3F592srkjA.safetensors",
+      "size": 256136,
+      "sha256": "a09f615b0084980ebc4076d71550bf73ccd8d4df076bbbee4a9beb523a1379d9",
+      "samples": {
+        "40m": "samples/40m/en/characters/captain_silas_blackwater_xPDpsV3F592srkjA/happy_01.ogg",
+        "31m": "samples/31m/en/characters/captain_silas_blackwater_xPDpsV3F592srkjA/happy_01.ogg",
+        "default": "samples/en/characters/captain_silas_blackwater_xPDpsV3F592srkjA.ogg"
+      }
+    },
+    {
+      "voice_id": "QXNr0SvkukLB4wPq",
+      "name": "Fairy Godmother",
+      "language": "en",
+      "locale": "characters",
+      "gender": null,
+      "age": null,
+      "description": "A kind fairy godmother, an older woman in her sixties. A low, warm, velvety alto voice, cosy and grandmotherly, unhurried and soothing, with a soft rich chuckle and a twinkle in every word. Gentle and reassuring, never high, never thin.",
+      "filename": "voices/QXNr0SvkukLB4wPq.safetensors",
+      "size": 256136,
+      "sha256": "f390c09f5e279c0f2171995a534b92f5ca5c83443906879da68fc27445f89d89",
+      "samples": {
+        "40m": "samples/40m/en/characters/fairy_godmother_QXNr0SvkukLB4wPq/happy_01.ogg",
+        "31m": "samples/31m/en/characters/fairy_godmother_QXNr0SvkukLB4wPq/happy_01.ogg",
+        "default": "samples/en/characters/fairy_godmother_QXNr0SvkukLB4wPq.ogg"
+      }
+    },
+    {
+      "voice_id": "cXoIXJ2llS8S0WOW",
+      "name": "Fennick the Young Elf",
+      "language": "en",
+      "locale": "characters",
+      "gender": null,
+      "age": null,
+      "description": "A curious, kind-hearted elf boy of about ten. A natural child's voice in a warm, soft middle range, never squeaky or shrill, earnest and wide-eyed, a little breathless with excitement, speaking quickly when amazed. Clean, close studio recording with no background noise or hiss.",
+      "filename": "voices/cXoIXJ2llS8S0WOW.safetensors",
+      "size": 256136,
+      "sha256": "a05944e4c69d61d10d66f689175ba0b081930df2d77b22f04d00ac40d3d69ecb",
+      "samples": {
+        "40m": "samples/40m/en/characters/fennick_the_young_elf_cXoIXJ2llS8S0WOW/happy_01.ogg",
+        "31m": "samples/31m/en/characters/fennick_the_young_elf_cXoIXJ2llS8S0WOW/happy_01.ogg",
+        "default": "samples/en/characters/fennick_the_young_elf_cXoIXJ2llS8S0WOW.ogg"
+      }
+    },
+    {
+      "voice_id": "cYtsRSxV5q9IMehn",
+      "name": "Grub the Ogre",
+      "language": "en",
+      "locale": "characters",
+      "gender": null,
+      "age": null,
+      "description": "A big, good-natured ogre who lives under a bridge. Gruff and grainy, rumbling low end, heavy chest resonance, slow lumbering rhythm with loose rounded words, and warm humour sitting just under the grumble.",
+      "filename": "voices/cYtsRSxV5q9IMehn.safetensors",
+      "size": 256136,
+      "sha256": "b30fa847686ec1eb6be8c5bea4b6a5c5076ea66c3ff053cf98210a155d8aad1e",
+      "samples": {
+        "40m": "samples/40m/en/characters/grub_the_ogre_cYtsRSxV5q9IMehn/happy_01.ogg",
+        "31m": "samples/31m/en/characters/grub_the_ogre_cYtsRSxV5q9IMehn/happy_01.ogg",
+        "default": "samples/en/characters/grub_the_ogre_cYtsRSxV5q9IMehn.ogg"
+      }
+    },
+    {
+      "voice_id": "gSgG5Tor0GPEnqzC",
+      "name": "Master Aldric",
+      "language": "en",
+      "locale": "characters",
+      "gender": null,
+      "age": null,
+      "description": "A wise old British wizard, around eighty. Rich and resonant with an aged grain, warm and kindly, deliberate pace with weighted pauses before the words that matter, able to rise into a ringing incantation.",
+      "filename": "voices/gSgG5Tor0GPEnqzC.safetensors",
+      "size": 256136,
+      "sha256": "a83430cc022b85c83753f859f9e44f406651646dab994fced8ef7a9a88005971",
+      "samples": {
+        "40m": "samples/40m/en/characters/master_aldric_gSgG5Tor0GPEnqzC/happy_01.ogg",
+        "31m": "samples/31m/en/characters/master_aldric_gSgG5Tor0GPEnqzC/happy_01.ogg",
+        "default": "samples/en/characters/master_aldric_gSgG5Tor0GPEnqzC.ogg"
+      }
+    },
+    {
+      "voice_id": "nOykTmcH9ydsGGIc",
+      "name": "Morwenna of the Deep",
+      "language": "en",
+      "locale": "characters",
+      "gender": null,
+      "age": null,
+      "description": "A sultry, seductive woman in her thirties. Low, husky alto, close to the microphone and almost whispered, slow and languid, purring, with a warm knowing smile in every word. Intimate, flirtatious and teasing, like a late-night torch singer luring someone closer, with a hint of danger underneath.",
+      "filename": "voices/nOykTmcH9ydsGGIc.safetensors",
+      "size": 256136,
+      "sha256": "2ff2db91e70648623df8d42c0dcd7c336b2f14cb4362d602a20f292a4d862154",
+      "samples": {
+        "40m": "samples/40m/en/characters/morwenna_of_the_deep_nOykTmcH9ydsGGIc/happy_01.ogg",
+        "31m": "samples/31m/en/characters/morwenna_of_the_deep_nOykTmcH9ydsGGIc/happy_01.ogg",
+        "default": "samples/en/characters/morwenna_of_the_deep_nOykTmcH9ydsGGIc.ogg"
+      }
+    },
+    {
+      "voice_id": "lX3LavMNdlIbgEHH",
+      "name": "Old Mortlake",
+      "language": "en",
+      "locale": "characters",
+      "gender": null,
+      "age": null,
+      "description": "An elderly gravedigger in a Victorian churchyard. Low, raspy and half whispered, melancholic, with heavy pauses that let every word settle like dirt on a coffin lid.",
+      "filename": "voices/lX3LavMNdlIbgEHH.safetensors",
+      "size": 256136,
+      "sha256": "d3f9429205e5906dcd3c78edaf7c9d5148c7e389e34c82c86f72f154adb5d923",
+      "samples": {
+        "40m": "samples/40m/en/characters/old_mortlake_lX3LavMNdlIbgEHH/happy_01.ogg",
+        "31m": "samples/31m/en/characters/old_mortlake_lX3LavMNdlIbgEHH/happy_01.ogg",
+        "default": "samples/en/characters/old_mortlake_lX3LavMNdlIbgEHH.ogg"
+      }
+    },
+    {
+      "voice_id": "y2eiKxtQo2B67deU",
+      "name": "Sir Bramwell",
+      "language": "en",
+      "locale": "characters",
+      "gender": null,
+      "age": null,
+      "description": "A brave but pompous English knight, middle-aged. Booming, plummy and theatrical, full of puffed-up self-importance, rolling grand phrases, with a comic wobble of nerves showing through the bravado.",
+      "filename": "voices/y2eiKxtQo2B67deU.safetensors",
+      "size": 256136,
+      "sha256": "b3cea6789aeb58822af16ba08c4e5105d7febb840dcb67b47f426c19d1a8f209",
+      "samples": {
+        "40m": "samples/40m/en/characters/sir_bramwell_y2eiKxtQo2B67deU/happy_01.ogg",
+        "31m": "samples/31m/en/characters/sir_bramwell_y2eiKxtQo2B67deU/happy_01.ogg",
+        "default": "samples/en/characters/sir_bramwell_y2eiKxtQo2B67deU.ogg"
+      }
+    },
+    {
+      "voice_id": "NIWoEurJHMJjyUTe",
+      "name": "The Snow Queen",
+      "language": "en",
+      "locale": "characters",
+      "gender": null,
+      "age": null,
+      "description": "A regal, cold-hearted queen of ice. A cool, crystalline mezzo voice, poised and elegant, precise articulation, unhurried and quietly commanding, with an enigmatic chill and a faint smile that never warms.",
+      "filename": "voices/NIWoEurJHMJjyUTe.safetensors",
+      "size": 256136,
+      "sha256": "bc8a8fcb95bb4f32d2d4376aa69d81b186b3ba2f8e9b6cb6a403b2b194590e85",
+      "samples": {
+        "40m": "samples/40m/en/characters/the_snow_queen_NIWoEurJHMJjyUTe/happy_01.ogg",
+        "31m": "samples/31m/en/characters/the_snow_queen_NIWoEurJHMJjyUTe/happy_01.ogg",
+        "default": "samples/en/characters/the_snow_queen_NIWoEurJHMJjyUTe.ogg"
+      }
+    },
+    {
+      "voice_id": "GXaSqMEmOg12OIYb",
+      "name": "The Thing Under the Stairs",
+      "language": "en",
+      "locale": "characters",
+      "gender": null,
+      "age": null,
+      "description": "A monstrous creature lurking in the dark. Gravelly, breathy and pitched near the floor, a threatening growl that stays quiet to stay frightening, with a slow mocking sneer.",
+      "filename": "voices/GXaSqMEmOg12OIYb.safetensors",
+      "size": 256136,
+      "sha256": "bfa37bac98aefbb9de80f792c47d01a0f9e3b94e73776169040c249c8b722759",
+      "samples": {
+        "40m": "samples/40m/en/characters/the_thing_under_the_stairs_GXaSqMEmOg12OIYb/happy_01.ogg",
+        "31m": "samples/31m/en/characters/the_thing_under_the_stairs_GXaSqMEmOg12OIYb/happy_01.ogg",
+        "default": "samples/en/characters/the_thing_under_the_stairs_GXaSqMEmOg12OIYb.ogg"
+      }
+    },
+    {
+      "voice_id": "xO8xQo3BrB8FuI6J",
+      "name": "Vyrmathrax the Ancient",
+      "language": "en",
+      "locale": "characters",
+      "gender": null,
+      "age": null,
+      "description": "An ancient dragon, thousands of years old. Very low and resonant, deep chest weight with gravel at the bottom of the register, slow and controlled with long pauses, dry and offhand, with the flat calm of something far too old to be impressed.",
+      "filename": "voices/xO8xQo3BrB8FuI6J.safetensors",
+      "size": 256136,
+      "sha256": "63ab4b15427844a804480a1603774262e8903dee33cb279e2749860dbfaedd10",
+      "samples": {
+        "40m": "samples/40m/en/characters/vyrmathrax_the_ancient_xO8xQo3BrB8FuI6J/happy_01.ogg",
+        "31m": "samples/31m/en/characters/vyrmathrax_the_ancient_xO8xQo3BrB8FuI6J/happy_01.ogg",
+        "default": "samples/en/characters/vyrmathrax_the_ancient_xO8xQo3BrB8FuI6J.ogg"
+      }
+    },
+    {
+      "voice_id": "X6NceqF285Gr04gb",
+      "name": "Alfie",
+      "language": "en",
+      "locale": "en-gb",
+      "gender": "male",
+      "age": "Young Adult",
+      "description": "Punchy and forward, with crisp consonant attack and a pitch that lifts across a line, sitting high over a music bed.",
+      "filename": "voices/X6NceqF285Gr04gb.safetensors",
+      "size": 256136,
+      "sha256": "4de75497fff3030168e8aa6dca23ffeb332b1bc8c25d0bf3507ceadac953ae9c",
+      "samples": {
+        "40m": "samples/40m/en/en-gb/male/1_alfie_X6NceqF285Gr04gb/happy_01.ogg",
+        "31m": "samples/31m/en/en-gb/male/1_alfie_X6NceqF285Gr04gb/happy_01.ogg",
+        "default": "samples/en/en-gb/male/1_alfie_X6NceqF285Gr04gb.ogg"
+      }
+    },
+    {
+      "voice_id": "gfP44RlHwr2kEwk7",
+      "name": "Bryony",
+      "language": "en",
+      "locale": "en-gb",
+      "gender": "female",
+      "age": "Middle-age",
+      "description": "Full, rich mid-range tones, softly relaxed and spoken close to the mic, moving briskly with light pitch play.",
+      "filename": "voices/gfP44RlHwr2kEwk7.safetensors",
+      "size": 256136,
+      "sha256": "bcc207a73b7885e45b49ab633d3377a10158292e3a7cef9cd6764ad107f1cb9b",
+      "samples": {
+        "40m": "samples/40m/en/en-gb/female/7_bryony_gfP44RlHwr2kEwk7/happy_01.ogg",
+        "31m": "samples/31m/en/en-gb/female/7_bryony_gfP44RlHwr2kEwk7/happy_01.ogg",
+        "default": "samples/en/en-gb/female/7_bryony_gfP44RlHwr2kEwk7.ogg"
+      }
+    },
+    {
+      "voice_id": "zUCxzrOrugTSis03",
+      "name": "Edwin",
+      "language": "en",
+      "locale": "en-gb",
+      "gender": "male",
+      "age": "Middle-age",
+      "description": "Efficient and firm, sincere in attention, with tidy articulation that holds up at phone bandwidth.",
+      "filename": "voices/zUCxzrOrugTSis03.safetensors",
+      "size": 256136,
+      "sha256": "ff1d0735b8b45710462b1d1f846da040f970c6eb62c7c2f36dbfb8e5bde74f1e",
+      "samples": {
+        "40m": "samples/40m/en/en-gb/male/3_edwin_zUCxzrOrugTSis03/happy_01.ogg",
+        "31m": "samples/31m/en/en-gb/male/3_edwin_zUCxzrOrugTSis03/happy_01.ogg",
+        "default": "samples/en/en-gb/male/3_edwin_zUCxzrOrugTSis03.ogg"
+      }
+    },
+    {
+      "voice_id": "y9bQqIDnyxwqK01t",
+      "name": "Elodie-Rose",
+      "language": "en",
+      "locale": "en-gb",
+      "gender": "female",
+      "age": "Young",
+      "description": "A young British voice with sharp, enthusiastic energy and crisp articulation, sparky and to the point for customer support and care.",
+      "filename": "voices/y9bQqIDnyxwqK01t.safetensors",
+      "size": 256136,
+      "sha256": "21eade9d83b2e66b9364e1b6cd999a3a6704c000a71f27f34e05ace5cdfd58bb",
+      "samples": {
+        "40m": "samples/40m/en/en-gb/female/4_elodie_rose_y9bQqIDnyxwqK01t/happy_01.ogg",
+        "31m": "samples/31m/en/en-gb/female/4_elodie_rose_y9bQqIDnyxwqK01t/happy_01.ogg",
+        "default": "samples/en/en-gb/female/4_elodie_rose_y9bQqIDnyxwqK01t.ogg"
+      }
+    },
+    {
+      "voice_id": "GgfEkEJtxZR7gnpy",
+      "name": "Freya",
+      "language": "en",
+      "locale": "en-gb",
+      "gender": "female",
+      "age": "Young",
+      "description": "A young British voice, glossy and confident with fast, girly chatter and bubbly sparkle, perfect for a friendly receptionist or assistant.",
+      "filename": "voices/GgfEkEJtxZR7gnpy.safetensors",
+      "size": 256136,
+      "sha256": "eb3cd47418349e618408c16bea7153988b3ad04b41a6033039dd474a9a4dcd23",
+      "samples": {
+        "40m": "samples/40m/en/en-gb/female/2_freya_GgfEkEJtxZR7gnpy/happy_01.ogg",
+        "31m": "samples/31m/en/en-gb/female/2_freya_GgfEkEJtxZR7gnpy/happy_01.ogg",
+        "default": "samples/en/en-gb/female/2_freya_GgfEkEJtxZR7gnpy.ogg"
+      }
+    },
+    {
+      "voice_id": "YyKcxPG7iIgS3jsK",
+      "name": "Hugh",
+      "language": "en",
+      "locale": "en-gb",
+      "gender": "male",
+      "age": "Middle-age",
+      "description": "Soft and close, airy in texture, with lively pitch movement and an attentive, sincere delivery.",
+      "filename": "voices/YyKcxPG7iIgS3jsK.safetensors",
+      "size": 256136,
+      "sha256": "3169d74b47a54d1eb15e4c243f56393abe9fe90c7e1c308ecf96ee67618b152a",
+      "samples": {
+        "40m": "samples/40m/en/en-gb/male/2_hugh_YyKcxPG7iIgS3jsK/happy_01.ogg",
+        "31m": "samples/31m/en/en-gb/male/2_hugh_YyKcxPG7iIgS3jsK/happy_01.ogg",
+        "default": "samples/en/en-gb/male/2_hugh_YyKcxPG7iIgS3jsK.ogg"
+      }
+    },
+    {
+      "voice_id": "gDT1nz7Ie36ZhL-C",
+      "name": "Imogen",
+      "language": "en",
+      "locale": "en-gb",
+      "gender": "female",
+      "age": "Adult",
+      "description": "A bubbly, friendly British English adult voice that puts callers instantly at ease. Great for onboarding assistants and warm concierge interactions.",
+      "filename": "voices/gDT1nz7Ie36ZhL-C.safetensors",
+      "size": 256136,
+      "sha256": "1980ab3c35fa98a25b5f3b5e643fd852e14ca8a12a4a26b06aaf1abf2a8c68b1",
+      "samples": {
+        "40m": "samples/40m/en/en-gb/female/5_imogen_gDT1nz7Ie36ZhL-C/happy_01.ogg",
+        "31m": "samples/31m/en/en-gb/female/5_imogen_gDT1nz7Ie36ZhL-C/happy_01.ogg",
+        "default": "samples/en/en-gb/female/5_imogen_gDT1nz7Ie36ZhL-C.ogg"
+      }
+    },
+    {
+      "voice_id": "m9MxpY6IUGXtWp76",
+      "name": "Lottie",
+      "language": "en",
+      "locale": "en-gb",
+      "gender": "female",
+      "age": "Young Adult",
+      "description": "Sparky and to the point, high forward energy with clean edges on the consonants and the range to drop low for one line then climb back.",
+      "filename": "voices/m9MxpY6IUGXtWp76.safetensors",
+      "size": 256136,
+      "sha256": "a906ebf17e43fded12b3d6bd077abb2df33bc86eff51c1beeb82e5d416527db3",
+      "samples": {
+        "40m": "samples/40m/en/en-gb/female/6_lottie_m9MxpY6IUGXtWp76/happy_01.ogg",
+        "31m": "samples/31m/en/en-gb/female/6_lottie_m9MxpY6IUGXtWp76/happy_01.ogg",
+        "default": "samples/en/en-gb/female/6_lottie_m9MxpY6IUGXtWp76.ogg"
+      }
+    },
+    {
+      "voice_id": "6PWnV0Nq4wu7RVBT",
+      "name": "Maeve",
+      "language": "en",
+      "locale": "en-gb",
+      "gender": "female",
+      "age": "Adult",
+      "description": "A sparky, attentive British English adult voice that gets to the point with a smile. Ideal for fast, efficient customer support and helpful voice assistants.",
+      "filename": "voices/6PWnV0Nq4wu7RVBT.safetensors",
+      "size": 256136,
+      "sha256": "56494ee67d533ad227ff0dfd0b1c13ff5aa91f1ad6e596e66c2986ba3005e844",
+      "samples": {
+        "40m": "samples/40m/en/en-gb/female/1_maeve_6PWnV0Nq4wu7RVBT/happy_01.ogg",
+        "31m": "samples/31m/en/en-gb/female/1_maeve_6PWnV0Nq4wu7RVBT/happy_01.ogg",
+        "default": "samples/en/en-gb/female/1_maeve_6PWnV0Nq4wu7RVBT.ogg"
+      }
+    },
+    {
+      "voice_id": "uem82D50GRv2Dwma",
+      "name": "Pippa",
+      "language": "en",
+      "locale": "en-gb",
+      "gender": "female",
+      "age": "Adult",
+      "description": "A confident, upbeat British English adult voice with infectious energy. Perfect for proactive assistants and motivating customer success calls.",
+      "filename": "voices/uem82D50GRv2Dwma.safetensors",
+      "size": 256136,
+      "sha256": "d41a8f01d6e33450f1ce062d332914da10beee99e585dab531750706f187c48a",
+      "samples": {
+        "40m": "samples/40m/en/en-gb/female/3_pippa_uem82D50GRv2Dwma/happy_01.ogg",
+        "31m": "samples/31m/en/en-gb/female/3_pippa_uem82D50GRv2Dwma/happy_01.ogg",
+        "default": "samples/en/en-gb/female/3_pippa_uem82D50GRv2Dwma.ogg"
+      }
+    },
+    {
+      "voice_id": "JOW0vchyswkQUMDS",
+      "name": "Spencer",
+      "language": "en",
+      "locale": "en-gb",
+      "gender": "male",
+      "age": "Middle-age",
+      "description": "Light and airy, sitting a touch higher, with crisp consonants and a slow, patient delivery.",
+      "filename": "voices/JOW0vchyswkQUMDS.safetensors",
+      "size": 256136,
+      "sha256": "cc9ac1107b0ffce282374a19beb7bfa95847724e6b7afbac991b4ae4277d5e6d",
+      "samples": {
+        "40m": "samples/40m/en/en-gb/male/4_spencer_JOW0vchyswkQUMDS/happy_01.ogg",
+        "31m": "samples/31m/en/en-gb/male/4_spencer_JOW0vchyswkQUMDS/happy_01.ogg",
+        "default": "samples/en/en-gb/male/4_spencer_JOW0vchyswkQUMDS.ogg"
+      }
+    },
+    {
+      "voice_id": "Zn7g6NxLqXlJb7Qi",
+      "name": "Teddy",
+      "language": "en",
+      "locale": "en-gb",
+      "gender": "male",
+      "age": "Young Adult",
+      "description": "Sparky and close in, quick off the mark, with firm consonants and the range to drop right down for a clause then come back up.",
+      "filename": "voices/Zn7g6NxLqXlJb7Qi.safetensors",
+      "size": 256136,
+      "sha256": "baea0ea9506f3237a5ebfc61afb7c72dbd189c5603b199ef42fbb00dbda379e0",
+      "samples": {
+        "40m": "samples/40m/en/en-gb/male/6_teddy_Zn7g6NxLqXlJb7Qi/happy_01.ogg",
+        "31m": "samples/31m/en/en-gb/male/6_teddy_Zn7g6NxLqXlJb7Qi/happy_01.ogg",
+        "default": "samples/en/en-gb/male/6_teddy_Zn7g6NxLqXlJb7Qi.ogg"
+      }
+    },
+    {
+      "voice_id": "dME3IWyZBvmh1n1q",
+      "name": "Toby",
+      "language": "en",
+      "locale": "en-gb",
+      "gender": "male",
+      "age": "Adult",
+      "description": "A sparky, attentive British English adult voice that gets to the point with a smile. Ideal for fast, efficient customer support and helpful voice assistants.",
+      "filename": "voices/dME3IWyZBvmh1n1q.safetensors",
+      "size": 256136,
+      "sha256": "09ab315c7f4b72b4d71e66cb756184cedfb1f14d222d096e115bf95bfe7b29dc",
+      "samples": {
+        "40m": "samples/40m/en/en-gb/male/5_toby_dME3IWyZBvmh1n1q/happy_01.ogg",
+        "31m": "samples/31m/en/en-gb/male/5_toby_dME3IWyZBvmh1n1q/happy_01.ogg",
+        "default": "samples/en/en-gb/male/5_toby_dME3IWyZBvmh1n1q.ogg"
+      }
+    },
+    {
+      "voice_id": "nGzMHMPAWGaJFHOo",
+      "name": "Delia",
+      "language": "en",
+      "locale": "en-us",
+      "gender": "female",
+      "age": "Middle-age",
+      "description": "Low, grounded and quick to the point, with a sincerity that keeps an apology honest.",
+      "filename": "voices/nGzMHMPAWGaJFHOo.safetensors",
+      "size": 256136,
+      "sha256": "a0c3dcb91b2247eca56536be9ae8e8becc1c807b1136c5fe101552d6a155b24a",
+      "samples": {
+        "40m": "samples/40m/en/en-us/female/6_delia_nGzMHMPAWGaJFHOo/happy_01.ogg",
+        "31m": "samples/31m/en/en-us/female/6_delia_nGzMHMPAWGaJFHOo/happy_01.ogg",
+        "default": "samples/en/en-us/female/6_delia_nGzMHMPAWGaJFHOo.ogg"
+      }
+    },
+    {
+      "voice_id": "LMDIYE0Oa377Qh6Z",
+      "name": "Easton",
+      "language": "en",
+      "locale": "en-us",
+      "gender": "male",
+      "age": "Young Adult",
+      "description": "Punchy and close in, with crisp consonant attack that cuts through a music bed and pitch that lifts across each line.",
+      "filename": "voices/LMDIYE0Oa377Qh6Z.safetensors",
+      "size": 256136,
+      "sha256": "45c582673cb20edb04ddcca2b5a8865ddfb0a82599efadb269021e87d20fbdd4",
+      "samples": {
+        "40m": "samples/40m/en/en-us/male/1_easton_LMDIYE0Oa377Qh6Z/happy_01.ogg",
+        "31m": "samples/31m/en/en-us/male/1_easton_LMDIYE0Oa377Qh6Z/happy_01.ogg",
+        "default": "samples/en/en-us/male/1_easton_LMDIYE0Oa377Qh6Z.ogg"
+      }
+    },
+    {
+      "voice_id": "vjFyp2BcCyTlUmYb",
+      "name": "Everly",
+      "language": "en",
+      "locale": "en-us",
+      "gender": "female",
+      "age": "Middle-age",
+      "description": "Rounded, soft-edged tone with gentle lift at the end of phrases and an easy, relaxed delivery.",
+      "filename": "voices/vjFyp2BcCyTlUmYb.safetensors",
+      "size": 256136,
+      "sha256": "958ea94da14f46dd48c7f64adac11ed2ad2aa45f7ccd165dfebab5272664402e",
+      "samples": {
+        "40m": "samples/40m/en/en-us/female/3_everly_vjFyp2BcCyTlUmYb/happy_01.ogg",
+        "31m": "samples/31m/en/en-us/female/3_everly_vjFyp2BcCyTlUmYb/happy_01.ogg",
+        "default": "samples/en/en-us/female/3_everly_vjFyp2BcCyTlUmYb.ogg"
+      }
+    },
+    {
+      "voice_id": "bXwrkHhURL1VFJdG",
+      "name": "Hadley",
+      "language": "en",
+      "locale": "en-us",
+      "gender": "female",
+      "age": "Middle-age",
+      "description": "Settled, even-toned and genuinely kind, with crisp consonants that hold up over a handset.",
+      "filename": "voices/bXwrkHhURL1VFJdG.safetensors",
+      "size": 256136,
+      "sha256": "a879938aa9a2df0a8220bdadef88137929f71e887bd91e7db205bd5fa11661d2",
+      "samples": {
+        "40m": "samples/40m/en/en-us/female/5_hadley_bXwrkHhURL1VFJdG/happy_01.ogg",
+        "31m": "samples/31m/en/en-us/female/5_hadley_bXwrkHhURL1VFJdG/happy_01.ogg",
+        "default": "samples/en/en-us/female/5_hadley_bXwrkHhURL1VFJdG.ogg"
+      }
+    },
+    {
+      "voice_id": "4SZHfMpw-p46Ywgs",
+      "name": "Harper",
+      "language": "en",
+      "locale": "en-us",
+      "gender": "female",
+      "age": "Adult",
+      "description": "Modern, confident and friendly voice with a standard American accent.",
+      "filename": "voices/4SZHfMpw-p46Ywgs.safetensors",
+      "size": 256136,
+      "sha256": "6b3da6e2d796a20c51af892c482bd6509fb88267a221aff83c870843dee2a123",
+      "samples": {
+        "40m": "samples/40m/en/en-us/female/4_harper_4SZHfMpw-p46Ywgs/happy_01.ogg",
+        "31m": "samples/31m/en/en-us/female/4_harper_4SZHfMpw-p46Ywgs/happy_01.ogg",
+        "default": "samples/en/en-us/female/4_harper_4SZHfMpw-p46Ywgs.ogg"
+      }
+    },
+    {
+      "voice_id": "NIWIOv5vTi5eRMj8",
+      "name": "Juniper",
+      "language": "en",
+      "locale": "en-us",
+      "gender": "female",
+      "age": "Young Adult",
+      "description": "Cheerful presence with real resonance under it, personable when the copy turns intimate and decisive on the final line.",
+      "filename": "voices/NIWIOv5vTi5eRMj8.safetensors",
+      "size": 256136,
+      "sha256": "444378eb06b7c492b86e8fc7d13e4db1a3c0cf3e68891a960bf6f0a41a13ef35",
+      "samples": {
+        "40m": "samples/40m/en/en-us/female/2_juniper_NIWIOv5vTi5eRMj8/happy_01.ogg",
+        "31m": "samples/31m/en/en-us/female/2_juniper_NIWIOv5vTi5eRMj8/happy_01.ogg",
+        "default": "samples/en/en-us/female/2_juniper_NIWIOv5vTi5eRMj8.ogg"
+      }
+    },
+    {
+      "voice_id": "40QrMVgAxFiUnP9f",
+      "name": "Micah",
+      "language": "en",
+      "locale": "en-us",
+      "gender": "male",
+      "age": "Young Adult",
+      "description": "Buoyant and high in energy, with a playful lift at the ends of phrases and clean attack that survives a loud mix.",
+      "filename": "voices/40QrMVgAxFiUnP9f.safetensors",
+      "size": 256136,
+      "sha256": "0de1098d1051686a138d068e83ff09deb5053328bc74ec9541a1fdb90bfc24da",
+      "samples": {
+        "40m": "samples/40m/en/en-us/male/2_micah_40QrMVgAxFiUnP9f/happy_01.ogg",
+        "31m": "samples/31m/en/en-us/male/2_micah_40QrMVgAxFiUnP9f/happy_01.ogg",
+        "default": "samples/en/en-us/male/2_micah_40QrMVgAxFiUnP9f.ogg"
+      }
+    },
+    {
+      "voice_id": "d9XCyhjo4JhkHF1d",
+      "name": "Miles",
+      "language": "en",
+      "locale": "en-us",
+      "gender": "male",
+      "age": "Young Adult",
+      "description": "Resonant and decisive, with genuine dynamic range, dropping right down for one clause then driving back up.",
+      "filename": "voices/d9XCyhjo4JhkHF1d.safetensors",
+      "size": 256136,
+      "sha256": "eab20e4f159b48cfbc01b1885804e24f681f80e7a64f909182763a4e3361bee8",
+      "samples": {
+        "40m": "samples/40m/en/en-us/male/6_miles_d9XCyhjo4JhkHF1d/happy_01.ogg",
+        "31m": "samples/31m/en/en-us/male/6_miles_d9XCyhjo4JhkHF1d/happy_01.ogg",
+        "default": "samples/en/en-us/male/6_miles_d9XCyhjo4JhkHF1d.ogg"
+      }
+    },
+    {
+      "voice_id": "qIxlZ7Ei8KvWlyQH",
+      "name": "Preston",
+      "language": "en",
+      "locale": "en-us",
+      "gender": "male",
+      "age": "Middle-age",
+      "description": "Trim, focused delivery with clean edges on every consonant and a steady, low-set core that carries through phone bandwidth.",
+      "filename": "voices/qIxlZ7Ei8KvWlyQH.safetensors",
+      "size": 256136,
+      "sha256": "6e04b84d3ae8751b22bca0a4f63936f9cb648f4f2182b2d0788071ea1c0b68a1",
+      "samples": {
+        "40m": "samples/40m/en/en-us/male/5_preston_qIxlZ7Ei8KvWlyQH/happy_01.ogg",
+        "31m": "samples/31m/en/en-us/male/5_preston_qIxlZ7Ei8KvWlyQH/happy_01.ogg",
+        "default": "samples/en/en-us/male/5_preston_qIxlZ7Ei8KvWlyQH.ogg"
+      }
+    },
+    {
+      "voice_id": "_6Aslh2DxfmnRLmP",
+      "name": "Russell",
+      "language": "en",
+      "locale": "en-us",
+      "gender": "male",
+      "age": "Adult",
+      "description": "A high-energy American adult voice that pushes and encourages with the intensity of someone who genuinely believes in you.",
+      "filename": "voices/_6Aslh2DxfmnRLmP.safetensors",
+      "size": 256136,
+      "sha256": "beae9e4030efce0a935fcb0f807dc0784d598bcaa87ad4aacb047436b1eaa411",
+      "samples": {
+        "40m": "samples/40m/en/en-us/male/4_russell__6Aslh2DxfmnRLmP/happy_01.ogg",
+        "31m": "samples/31m/en/en-us/male/4_russell__6Aslh2DxfmnRLmP/happy_01.ogg",
+        "default": "samples/en/en-us/male/4_russell__6Aslh2DxfmnRLmP.ogg"
+      }
+    },
+    {
+      "voice_id": "0zLApsZfVLLNaEGl",
+      "name": "Trevor",
+      "language": "en",
+      "locale": "en-us",
+      "gender": "male",
+      "age": "Middle-age",
+      "description": "Buoyant energy over a resonant mid-low core, phrases landing softly and consonants cutting through a handset.",
+      "filename": "voices/0zLApsZfVLLNaEGl.safetensors",
+      "size": 256136,
+      "sha256": "dc1341c8937af5534e6bbcc5c0fc5e7c10312229b59061228074f93683fe2261",
+      "samples": {
+        "40m": "samples/40m/en/en-us/male/3_trevor_0zLApsZfVLLNaEGl/happy_01.ogg",
+        "31m": "samples/31m/en/en-us/male/3_trevor_0zLApsZfVLLNaEGl/happy_01.ogg",
+        "default": "samples/en/en-us/male/3_trevor_0zLApsZfVLLNaEGl.ogg"
+      }
+    },
+    {
+      "voice_id": "NbpkqMVS3CJeq2j8",
+      "name": "Zoey",
+      "language": "en",
+      "locale": "en-us",
+      "gender": "female",
+      "age": "Adult",
+      "description": "Playful, upbeat and Gen Z energy voice with a standard American accent. Perfect for engaging conversations!",
+      "filename": "voices/NbpkqMVS3CJeq2j8.safetensors",
+      "size": 256136,
+      "sha256": "97c7f8c253413574406ab80dd23f49c3ebb2517163b00a9bf86b9c4cf43e7e23",
+      "samples": {
+        "40m": "samples/40m/en/en-us/female/1_zoey_NbpkqMVS3CJeq2j8/happy_01.ogg",
+        "31m": "samples/31m/en/en-us/female/1_zoey_NbpkqMVS3CJeq2j8/happy_01.ogg",
+        "default": "samples/en/en-us/female/1_zoey_NbpkqMVS3CJeq2j8.ogg"
+      }
+    },
+    {
+      "voice_id": "p6Uutkyi3j2iNAUu",
+      "name": "Annika",
+      "language": "de",
+      "locale": "de-de",
+      "gender": "female",
+      "age": "Adult",
+      "description": "A sparky, attentive German adult voice that gets to the point with a smile. Ideal for fast, efficient customer support and helpful voice assistants.",
+      "filename": "voices/p6Uutkyi3j2iNAUu.safetensors",
+      "size": 256136,
+      "sha256": "0a4ec738c4222645f175dca1015686b0a628f100650a5e0ab26e88d0a9b60fd4",
+      "samples": {
+        "40m": "samples/40m/de/de-de/female/3_annika_p6Uutkyi3j2iNAUu/happy_01.ogg",
+        "31m": "samples/31m/de/de-de/female/3_annika_p6Uutkyi3j2iNAUu/happy_01.ogg",
+        "default": "samples/de/de-de/female/3_annika_p6Uutkyi3j2iNAUu.ogg"
+      }
+    },
+    {
+      "voice_id": "3ZKKapPOvuWFcw9f",
+      "name": "Anton",
+      "language": "de",
+      "locale": "de-de",
+      "gender": "male",
+      "age": "Adult",
+      "description": "A vibrant, engaging German adult voice that makes every explanation feel personal. Built for product guides and walk-through assistants.",
+      "filename": "voices/3ZKKapPOvuWFcw9f.safetensors",
+      "size": 256136,
+      "sha256": "b645c79148a02f6cd2ef7a6b3658373166e19a9a1c49fb81408be5d79667e6cb",
+      "samples": {
+        "40m": "samples/40m/de/de-de/male/1_anton_3ZKKapPOvuWFcw9f/happy_01.ogg",
+        "31m": "samples/31m/de/de-de/male/1_anton_3ZKKapPOvuWFcw9f/happy_01.ogg",
+        "default": "samples/de/de-de/male/1_anton_3ZKKapPOvuWFcw9f.ogg"
+      }
+    },
+    {
+      "voice_id": "yyS1KYWs6mXoEw7D",
+      "name": "Henrik",
+      "language": "de",
+      "locale": "de-de",
+      "gender": "male",
+      "age": "Adult",
+      "description": "An easy-going, friendly German adult voice that puts callers instantly at ease. Great for onboarding assistants and warm concierge interactions.",
+      "filename": "voices/yyS1KYWs6mXoEw7D.safetensors",
+      "size": 256136,
+      "sha256": "4a1bea252ee32f44dff1852894a521bb5de0b58a3ba5f18011c84aab0ad45916",
+      "samples": {
+        "40m": "samples/40m/de/de-de/male/4_henrik_yyS1KYWs6mXoEw7D/happy_01.ogg",
+        "31m": "samples/31m/de/de-de/male/4_henrik_yyS1KYWs6mXoEw7D/happy_01.ogg",
+        "default": "samples/de/de-de/male/4_henrik_yyS1KYWs6mXoEw7D.ogg"
+      }
+    },
+    {
+      "voice_id": "4Mn9VfG2wsLLEzi5",
+      "name": "Jette",
+      "language": "de",
+      "locale": "de-de",
+      "gender": "female",
+      "age": "Young",
+      "description": "An upbeat young German voice with a light girlish tone and warm bounce, a chipper assistant who keeps things moving with a smile.",
+      "filename": "voices/4Mn9VfG2wsLLEzi5.safetensors",
+      "size": 256136,
+      "sha256": "720e656aa74cd81729593e0672a6213f5f9e5480bead08321e2a6a327eb8e453",
+      "samples": {
+        "40m": "samples/40m/de/de-de/female/2_jette_4Mn9VfG2wsLLEzi5/happy_01.ogg",
+        "31m": "samples/31m/de/de-de/female/2_jette_4Mn9VfG2wsLLEzi5/happy_01.ogg",
+        "default": "samples/de/de-de/female/2_jette_4Mn9VfG2wsLLEzi5.ogg"
+      }
+    },
+    {
+      "voice_id": "yadpmqsHVrYC0NJp",
+      "name": "Josefine",
+      "language": "de",
+      "locale": "de-de",
+      "gender": "female",
+      "age": "Middle-age",
+      "description": "Rounded and even in tone, sincere at the phrase ends, with consonants that hold up over a handset.",
+      "filename": "voices/yadpmqsHVrYC0NJp.safetensors",
+      "size": 256136,
+      "sha256": "f0c5e9b03ec651da1b8ae2d76f23b46381c9943e1e7c7ad434f66a6bb1a16d44",
+      "samples": {
+        "40m": "samples/40m/de/de-de/female/6_josefine_yadpmqsHVrYC0NJp/happy_01.ogg",
+        "31m": "samples/31m/de/de-de/female/6_josefine_yadpmqsHVrYC0NJp/happy_01.ogg",
+        "default": "samples/de/de-de/female/6_josefine_yadpmqsHVrYC0NJp.ogg"
+      }
+    },
+    {
+      "voice_id": "MxhgvuHuUER7qjmL",
+      "name": "Jule",
+      "language": "de",
+      "locale": "de-de",
+      "gender": "female",
+      "age": "Young Adult",
+      "description": "Open and cheerful, sitting high and close over music, with an airy lift that softens where the copy turns personal.",
+      "filename": "voices/MxhgvuHuUER7qjmL.safetensors",
+      "size": 256136,
+      "sha256": "05160ccf33ce0e22da9a2eb601e992bc9fc34e2591e22d3af4f07a07f3731cb7",
+      "samples": {
+        "40m": "samples/40m/de/de-de/female/4_jule_MxhgvuHuUER7qjmL/happy_01.ogg",
+        "31m": "samples/31m/de/de-de/female/4_jule_MxhgvuHuUER7qjmL/happy_01.ogg",
+        "default": "samples/de/de-de/female/4_jule_MxhgvuHuUER7qjmL.ogg"
+      }
+    },
+    {
+      "voice_id": "20zdyYrQPzKlCwkk",
+      "name": "Leon",
+      "language": "de",
+      "locale": "de-de",
+      "gender": "male",
+      "age": "Adult",
+      "description": "A bright, welcoming German adult voice with the warmth of a great receptionist. Perfect for greeting customers and friendly front-line support.",
+      "filename": "voices/20zdyYrQPzKlCwkk.safetensors",
+      "size": 256136,
+      "sha256": "28af62a4ed8af73b560dd5f78f48045969a74306f2d85aedcb4c820025f74870",
+      "samples": {
+        "40m": "samples/40m/de/de-de/male/5_leon_20zdyYrQPzKlCwkk/happy_01.ogg",
+        "31m": "samples/31m/de/de-de/male/5_leon_20zdyYrQPzKlCwkk/happy_01.ogg",
+        "default": "samples/de/de-de/male/5_leon_20zdyYrQPzKlCwkk.ogg"
+      }
+    },
+    {
+      "voice_id": "MOrDPn052KUlnKXk",
+      "name": "Lotta",
+      "language": "de",
+      "locale": "de-de",
+      "gender": "female",
+      "age": "Young Adult",
+      "description": "High forward energy with a close, present tone and crisp consonant attack that cuts through a music bed, plus real lift on the punchline.",
+      "filename": "voices/MOrDPn052KUlnKXk.safetensors",
+      "size": 256136,
+      "sha256": "a0f55b29cf02a7bab15a9f8ff961f632e7f7a393b2c69a0ce2c4026e7a9c1742",
+      "samples": {
+        "40m": "samples/40m/de/de-de/female/5_lotta_MOrDPn052KUlnKXk/happy_01.ogg",
+        "31m": "samples/31m/de/de-de/female/5_lotta_MOrDPn052KUlnKXk/happy_01.ogg",
+        "default": "samples/de/de-de/female/5_lotta_MOrDPn052KUlnKXk.ogg"
+      }
+    },
+    {
+      "voice_id": "Kf5m22mROozoMWj3",
+      "name": "Mats",
+      "language": "de",
+      "locale": "de-de",
+      "gender": "male",
+      "age": "Adult",
+      "description": "A sparky, attentive German adult voice that gets to the point with a smile. Ideal for fast, efficient customer support and helpful voice assistants.",
+      "filename": "voices/Kf5m22mROozoMWj3.safetensors",
+      "size": 256136,
+      "sha256": "1cd9e5471568fe905906742568b5d3d2e89cdac1fa8b8272780d984d7d54ec9a",
+      "samples": {
+        "40m": "samples/40m/de/de-de/male/3_mats_Kf5m22mROozoMWj3/happy_01.ogg",
+        "31m": "samples/31m/de/de-de/male/3_mats_Kf5m22mROozoMWj3/happy_01.ogg",
+        "default": "samples/de/de-de/male/3_mats_Kf5m22mROozoMWj3.ogg"
+      }
+    },
+    {
+      "voice_id": "R3uU1GTAZJotUhUs",
+      "name": "Mika",
+      "language": "de",
+      "locale": "de-de",
+      "gender": "male",
+      "age": "Young Adult",
+      "description": "Punchy and to the point, with a firm, resonant core, clean word endings and real snap between loud and quiet.",
+      "filename": "voices/R3uU1GTAZJotUhUs.safetensors",
+      "size": 256136,
+      "sha256": "36840305b88f217cc20e153276eaaf74718e5e2b50ac05f0dd6c4606b0d576a2",
+      "samples": {
+        "40m": "samples/40m/de/de-de/male/6_mika_R3uU1GTAZJotUhUs/happy_01.ogg",
+        "31m": "samples/31m/de/de-de/male/6_mika_R3uU1GTAZJotUhUs/happy_01.ogg",
+        "default": "samples/de/de-de/male/6_mika_R3uU1GTAZJotUhUs.ogg"
+      }
+    },
+    {
+      "voice_id": "Xn9xDzqSSr4xGTNg",
+      "name": "Mirko",
+      "language": "de",
+      "locale": "de-de",
+      "gender": "male",
+      "age": "Young Adult",
+      "description": "Punchy and close-miked in feel, with hard edges on the consonants and a decisive drop on the final line.",
+      "filename": "voices/Xn9xDzqSSr4xGTNg.safetensors",
+      "size": 256136,
+      "sha256": "275c9024bf16518fab2c477d4acdc76cad6f2c322ce083ab56238c3856012f57",
+      "samples": {
+        "40m": "samples/40m/de/de-de/male/2_mirko_Xn9xDzqSSr4xGTNg/happy_01.ogg",
+        "31m": "samples/31m/de/de-de/male/2_mirko_Xn9xDzqSSr4xGTNg/happy_01.ogg",
+        "default": "samples/de/de-de/male/2_mirko_Xn9xDzqSSr4xGTNg.ogg"
+      }
+    },
+    {
+      "voice_id": "2A2fFf8SkDEJ8nzx",
+      "name": "Nele",
+      "language": "de",
+      "locale": "de-de",
+      "gender": "female",
+      "age": "Middle-age",
+      "description": "Rounded, open tone with gentle lift at the ends of phrases and an easy, flowing rhythm.",
+      "filename": "voices/2A2fFf8SkDEJ8nzx.safetensors",
+      "size": 256136,
+      "sha256": "5d5ad59fdd4642cd162f082873b27f658705a5d8598957d6274b30bf4bd4dc0b",
+      "samples": {
+        "40m": "samples/40m/de/de-de/female/1_nele_2A2fFf8SkDEJ8nzx/happy_01.ogg",
+        "31m": "samples/31m/de/de-de/female/1_nele_2A2fFf8SkDEJ8nzx/happy_01.ogg",
+        "default": "samples/de/de-de/female/1_nele_2A2fFf8SkDEJ8nzx.ogg"
+      }
+    },
+    {
+      "voice_id": "Adoh4wA9tp5QXJi9",
+      "name": "Svea",
+      "language": "de",
+      "locale": "de-de",
+      "gender": "female",
+      "age": "Young Adult",
+      "description": "Sparky and to the point, with clean consonant edges, brisk rhythm and a decisive drop on the final line.",
+      "filename": "voices/Adoh4wA9tp5QXJi9.safetensors",
+      "size": 256136,
+      "sha256": "0179a71e0aa1e89320ed35da4c6dea30384f98d24ee931517916742ccf7e6002",
+      "samples": {
+        "40m": "samples/40m/de/de-de/female/7_svea_Adoh4wA9tp5QXJi9/happy_01.ogg",
+        "31m": "samples/31m/de/de-de/female/7_svea_Adoh4wA9tp5QXJi9/happy_01.ogg",
+        "default": "samples/de/de-de/female/7_svea_Adoh4wA9tp5QXJi9.ogg"
+      }
+    },
+    {
+      "voice_id": "u2UscyAnHilpiwmf",
+      "name": "Alba",
+      "language": "es",
+      "locale": "es-es",
+      "gender": "female",
+      "age": "Young",
+      "description": "A sweet, expressive young Castilian Spanish voice, soft and girly with lively emphasis, sparky and to the point for efficient support.",
+      "filename": "voices/u2UscyAnHilpiwmf.safetensors",
+      "size": 256136,
+      "sha256": "edd14cc89944ec7a9b1a87cc6be6f371f1a56791d344d921f850e2106e6dee9e",
+      "samples": {
+        "40m": "samples/40m/es/es-es/female/5_alba_u2UscyAnHilpiwmf/happy_01.ogg",
+        "31m": "samples/31m/es/es-es/female/5_alba_u2UscyAnHilpiwmf/happy_01.ogg",
+        "default": "samples/es/es-es/female/5_alba_u2UscyAnHilpiwmf.ogg"
+      }
+    },
+    {
+      "voice_id": "4701YgRXjkBcg6sL",
+      "name": "Alicia",
+      "language": "es",
+      "locale": "es-es",
+      "gender": "female",
+      "age": "Middle-age",
+      "description": "Rounded and softly resonant, settling low in the range, with phrases that land gently and an apology that sounds genuinely meant.",
+      "filename": "voices/4701YgRXjkBcg6sL.safetensors",
+      "size": 256136,
+      "sha256": "74c6bf732b76478e77072d21feca13b0bf0c664eccd2186902a63ba0d9effe59",
+      "samples": {
+        "40m": "samples/40m/es/es-es/female/6_alicia_4701YgRXjkBcg6sL/happy_01.ogg",
+        "31m": "samples/31m/es/es-es/female/6_alicia_4701YgRXjkBcg6sL/happy_01.ogg",
+        "default": "samples/es/es-es/female/6_alicia_4701YgRXjkBcg6sL.ogg"
+      }
+    },
+    {
+      "voice_id": "tIjCgP8v3RY8UpgM",
+      "name": "Borja",
+      "language": "es",
+      "locale": "es-es",
+      "gender": "male",
+      "age": "Young Adult",
+      "description": "Resonant and punchy, driving a rhythmic read that cuts over a loud music bed and lands squarely on the brand name.",
+      "filename": "voices/tIjCgP8v3RY8UpgM.safetensors",
+      "size": 256136,
+      "sha256": "fc8828dcdad4a09b7066b9008b108b77976ec4880d531da7761ded9a431bd208",
+      "samples": {
+        "40m": "samples/40m/es/es-es/male/2_borja_tIjCgP8v3RY8UpgM/happy_01.ogg",
+        "31m": "samples/31m/es/es-es/male/2_borja_tIjCgP8v3RY8UpgM/happy_01.ogg",
+        "default": "samples/es/es-es/male/2_borja_tIjCgP8v3RY8UpgM.ogg"
+      }
+    },
+    {
+      "voice_id": "c9wqBDmQiBie5q6Y",
+      "name": "Candela",
+      "language": "es",
+      "locale": "es-es",
+      "gender": "female",
+      "age": "Young",
+      "description": "An enthusiastic, bubbly young Castilian Spanish voice, animated like a beauty guru mid-tutorial, adding fun energy to customer care.",
+      "filename": "voices/c9wqBDmQiBie5q6Y.safetensors",
+      "size": 256136,
+      "sha256": "4857d013c7502e4d074778b17122e85919bffa52741a0072e412dd3926853dcb",
+      "samples": {
+        "40m": "samples/40m/es/es-es/female/3_candela_c9wqBDmQiBie5q6Y/happy_01.ogg",
+        "31m": "samples/31m/es/es-es/female/3_candela_c9wqBDmQiBie5q6Y/happy_01.ogg",
+        "default": "samples/es/es-es/female/3_candela_c9wqBDmQiBie5q6Y.ogg"
+      }
+    },
+    {
+      "voice_id": "rmLBOdHrfkFym9MM",
+      "name": "Celia",
+      "language": "es",
+      "locale": "es-es",
+      "gender": "female",
+      "age": "Young Adult",
+      "description": "Sparky and forward, light on the air but firm on every consonant, landing the final line without pushing.",
+      "filename": "voices/rmLBOdHrfkFym9MM.safetensors",
+      "size": 256136,
+      "sha256": "6ed37f47fe59674b0c9f2c099ab983d4a847ca14d09aedf80f1608a11148c757",
+      "samples": {
+        "40m": "samples/40m/es/es-es/female/4_celia_rmLBOdHrfkFym9MM/happy_01.ogg",
+        "31m": "samples/31m/es/es-es/female/4_celia_rmLBOdHrfkFym9MM/happy_01.ogg",
+        "default": "samples/es/es-es/female/4_celia_rmLBOdHrfkFym9MM.ogg"
+      }
+    },
+    {
+      "voice_id": "FaLVVqpFQcDOtq45",
+      "name": "Guillermo",
+      "language": "es",
+      "locale": "es-es",
+      "gender": "male",
+      "age": "Middle-age",
+      "description": "Low and resonant, settled in tone, with phrases that land softly and an apology that sounds genuinely meant.",
+      "filename": "voices/FaLVVqpFQcDOtq45.safetensors",
+      "size": 256136,
+      "sha256": "31a3837cc6705f37f95c27282ebeba71609b32204622245a6436258cd3d3497d",
+      "samples": {
+        "40m": "samples/40m/es/es-es/male/6_guillermo_FaLVVqpFQcDOtq45/happy_01.ogg",
+        "31m": "samples/31m/es/es-es/male/6_guillermo_FaLVVqpFQcDOtq45/happy_01.ogg",
+        "default": "samples/es/es-es/male/6_guillermo_FaLVVqpFQcDOtq45.ogg"
+      }
+    },
+    {
+      "voice_id": "t-_TS1e-0GzDAX02",
+      "name": "Iker",
+      "language": "es",
+      "locale": "es-es",
+      "gender": "male",
+      "age": "Adult",
+      "description": "An easy-going, friendly Peninsular Spanish adult voice that puts callers instantly at ease. Great for onboarding assistants and warm concierge interactions.",
+      "filename": "voices/t-_TS1e-0GzDAX02.safetensors",
+      "size": 256136,
+      "sha256": "25c6df91a261bcb96d9e5152c9b0988398859c0e6f4ee5f08dd577fd3bd0300d",
+      "samples": {
+        "40m": "samples/40m/es/es-es/male/3_iker_t-_TS1e-0GzDAX02/happy_01.ogg",
+        "31m": "samples/31m/es/es-es/male/3_iker_t-_TS1e-0GzDAX02/happy_01.ogg",
+        "default": "samples/es/es-es/male/3_iker_t-_TS1e-0GzDAX02.ogg"
+      }
+    },
+    {
+      "voice_id": "Ejb29qHnSOK0cIHY",
+      "name": "Izan",
+      "language": "es",
+      "locale": "es-es",
+      "gender": "male",
+      "age": "Young Adult",
+      "description": "Crisp consonant attack, forward energy and a punchy delivery that sits on top of a music bed.",
+      "filename": "voices/Ejb29qHnSOK0cIHY.safetensors",
+      "size": 256136,
+      "sha256": "471332253b2f76c406e395230453a7a737708cca18461237cfce0239430cb071",
+      "samples": {
+        "40m": "samples/40m/es/es-es/male/5_izan_Ejb29qHnSOK0cIHY/happy_01.ogg",
+        "31m": "samples/31m/es/es-es/male/5_izan_Ejb29qHnSOK0cIHY/happy_01.ogg",
+        "default": "samples/es/es-es/male/5_izan_Ejb29qHnSOK0cIHY.ogg"
+      }
+    },
+    {
+      "voice_id": "3p0eIGbkmny71GlA",
+      "name": "Lucía-Sol",
+      "language": "es",
+      "locale": "es-es",
+      "gender": "female",
+      "age": "Young",
+      "description": "A bouncy, chipper young Castilian Spanish voice with a cute upward lilt, bringing playful energy to friendly reception and support.",
+      "filename": "voices/3p0eIGbkmny71GlA.safetensors",
+      "size": 256136,
+      "sha256": "275928c11b3c8b02e51c72653d060433e1d73a01458ef21b18e9a7f5cbd5205c",
+      "samples": {
+        "40m": "samples/40m/es/es-es/female/2_lucia_sol_3p0eIGbkmny71GlA/happy_01.ogg",
+        "31m": "samples/31m/es/es-es/female/2_lucia_sol_3p0eIGbkmny71GlA/happy_01.ogg",
+        "default": "samples/es/es-es/female/2_lucia_sol_3p0eIGbkmny71GlA.ogg"
+      }
+    },
+    {
+      "voice_id": "jvPx8j8zLGQ3utZz",
+      "name": "Marcos",
+      "language": "es",
+      "locale": "es-es",
+      "gender": "male",
+      "age": "Adult",
+      "description": "A confident, upbeat Peninsular Spanish adult voice with infectious energy. Perfect for proactive assistants and motivating customer success calls.",
+      "filename": "voices/jvPx8j8zLGQ3utZz.safetensors",
+      "size": 256136,
+      "sha256": "be8c5f329070f40c39007bea13cee9503fe71599704cfe55c67d6eb51f5e6eb2",
+      "samples": {
+        "40m": "samples/40m/es/es-es/male/1_marcos_jvPx8j8zLGQ3utZz/happy_01.ogg",
+        "31m": "samples/31m/es/es-es/male/1_marcos_jvPx8j8zLGQ3utZz/happy_01.ogg",
+        "default": "samples/es/es-es/male/1_marcos_jvPx8j8zLGQ3utZz.ogg"
+      }
+    },
+    {
+      "voice_id": "EQcQFGkYfMn5YJgx",
+      "name": "Nerea",
+      "language": "es",
+      "locale": "es-es",
+      "gender": "female",
+      "age": "Middle-age",
+      "description": "Rounded, lightly resonant tone with gentle lift at the end of phrases and an even, relaxed delivery.",
+      "filename": "voices/EQcQFGkYfMn5YJgx.safetensors",
+      "size": 256136,
+      "sha256": "c419a49606182c98e06c369d0cfb9b66cc0f16bfdbc70490fa7daf2289144986",
+      "samples": {
+        "40m": "samples/40m/es/es-es/female/7_nerea_EQcQFGkYfMn5YJgx/happy_01.ogg",
+        "31m": "samples/31m/es/es-es/female/7_nerea_EQcQFGkYfMn5YJgx/happy_01.ogg",
+        "default": "samples/es/es-es/female/7_nerea_EQcQFGkYfMn5YJgx.ogg"
+      }
+    },
+    {
+      "voice_id": "b6FvJAiokjdqIti4",
+      "name": "Noa",
+      "language": "es",
+      "locale": "es-es",
+      "gender": "female",
+      "age": "Young",
+      "description": "A glossy, confident young Castilian Spanish voice with fast, girly charm and warmth, a bubbly assistant that makes every chat sparkle.",
+      "filename": "voices/b6FvJAiokjdqIti4.safetensors",
+      "size": 256136,
+      "sha256": "0bc37938a306a35f6c9f8ea53ccca14c5fc8b5575850f0cd15b352f4c3ce826e",
+      "samples": {
+        "40m": "samples/40m/es/es-es/female/1_noa_b6FvJAiokjdqIti4/happy_01.ogg",
+        "31m": "samples/31m/es/es-es/female/1_noa_b6FvJAiokjdqIti4/happy_01.ogg",
+        "default": "samples/es/es-es/female/1_noa_b6FvJAiokjdqIti4.ogg"
+      }
+    },
+    {
+      "voice_id": "fghJGlv90qu8OJ36",
+      "name": "Nuno",
+      "language": "es",
+      "locale": "es-es",
+      "gender": "male",
+      "age": "Middle-age",
+      "description": "Resonant and easy-going, with a relaxed mid-range delivery and a hint of playful lift at the end of phrases.",
+      "filename": "voices/fghJGlv90qu8OJ36.safetensors",
+      "size": 256136,
+      "sha256": "60656e9cd518454850a7e6ecacb953572a4a23f0a358fe3b4fb946b67f6bf934",
+      "samples": {
+        "40m": "samples/40m/es/es-es/male/4_nuno_fghJGlv90qu8OJ36/happy_01.ogg",
+        "31m": "samples/31m/es/es-es/male/4_nuno_fghJGlv90qu8OJ36/happy_01.ogg",
+        "default": "samples/es/es-es/male/4_nuno_fghJGlv90qu8OJ36.ogg"
+      }
+    },
+    {
+      "voice_id": "ax7dW1XB0eiMfHgO",
+      "name": "Aldo",
+      "language": "es",
+      "locale": "es-mx",
+      "gender": "male",
+      "age": "Young Adult",
+      "description": "Forward, close-miked energy with crisp consonant attack and pitch that climbs and drops across a line.",
+      "filename": "voices/ax7dW1XB0eiMfHgO.safetensors",
+      "size": 256136,
+      "sha256": "128eeba9b5f5c6d336e1246ae20a40765fba8e5ac268aafa691b98bce1e0acfd",
+      "samples": {
+        "40m": "samples/40m/es/es-mx/male/2_aldo_ax7dW1XB0eiMfHgO/happy_01.ogg",
+        "31m": "samples/31m/es/es-mx/male/2_aldo_ax7dW1XB0eiMfHgO/happy_01.ogg",
+        "default": "samples/es/es-mx/male/2_aldo_ax7dW1XB0eiMfHgO.ogg"
+      }
+    },
+    {
+      "voice_id": "KJpIQlbYrZPA4aLq",
+      "name": "Azucena",
+      "language": "es",
+      "locale": "es-mx",
+      "gender": "female",
+      "age": "Older Adult",
+      "description": "Weighted lower register with steady authority that comes from calm rather than volume, and diction that survives raised playback speed.",
+      "filename": "voices/KJpIQlbYrZPA4aLq.safetensors",
+      "size": 256136,
+      "sha256": "b5bcbbce39a6332b2f79067be19688753c28c1fc4053bf41fd4608d54c24e1ee",
+      "samples": {
+        "40m": "samples/40m/es/es-mx/female/4_azucena_KJpIQlbYrZPA4aLq/happy_01.ogg",
+        "31m": "samples/31m/es/es-mx/female/4_azucena_KJpIQlbYrZPA4aLq/happy_01.ogg",
+        "default": "samples/es/es-mx/female/4_azucena_KJpIQlbYrZPA4aLq.ogg"
+      }
+    },
+    {
+      "voice_id": "evfxKSxpDIhmsNoq",
+      "name": "Danae",
+      "language": "es",
+      "locale": "es-mx",
+      "gender": "female",
+      "age": "Young Adult",
+      "description": "Sparky and punchy, with a light, airy top end, clean attack on every word and a brisk rhythm that lands the brand name.",
+      "filename": "voices/evfxKSxpDIhmsNoq.safetensors",
+      "size": 256136,
+      "sha256": "549f2a8dec851b967edbbd67b29d2da0799eec9ec2fefb5b0ec8aa99436d3eea",
+      "samples": {
+        "40m": "samples/40m/es/es-mx/female/3_danae_evfxKSxpDIhmsNoq/happy_01.ogg",
+        "31m": "samples/31m/es/es-mx/female/3_danae_evfxKSxpDIhmsNoq/happy_01.ogg",
+        "default": "samples/es/es-mx/female/3_danae_evfxKSxpDIhmsNoq.ogg"
+      }
+    },
+    {
+      "voice_id": "qG5BXOJYrKEnXLIX",
+      "name": "Jimena",
+      "language": "es",
+      "locale": "es-mx",
+      "gender": "female",
+      "age": "Young Adult",
+      "description": "Crisp consonant attack and a forward, sparky delivery that sits over a music bed, with pitch that lifts and drops inside a single line.",
+      "filename": "voices/qG5BXOJYrKEnXLIX.safetensors",
+      "size": 256136,
+      "sha256": "3d5590357dbd87b697a14573bbdc1f29e2abc5b6cd8a5e9ed3c98e325dede435",
+      "samples": {
+        "40m": "samples/40m/es/es-mx/female/5_jimena_qG5BXOJYrKEnXLIX/happy_01.ogg",
+        "31m": "samples/31m/es/es-mx/female/5_jimena_qG5BXOJYrKEnXLIX/happy_01.ogg",
+        "default": "samples/es/es-mx/female/5_jimena_qG5BXOJYrKEnXLIX.ogg"
+      }
+    },
+    {
+      "voice_id": "F05gqkzX7WhKVpSL",
+      "name": "Lalo",
+      "language": "es",
+      "locale": "es-mx",
+      "gender": "male",
+      "age": "Young Adult",
+      "description": "Fuller and rounder low end, concise phrasing and a decisive drop on the last line, with range to pull back for one clause and push again.",
+      "filename": "voices/F05gqkzX7WhKVpSL.safetensors",
+      "size": 256136,
+      "sha256": "08159aad0d92cb391361abaf8c4bf6ac0d8358ab1514cce8cf5c89b448395ce5",
+      "samples": {
+        "40m": "samples/40m/es/es-mx/male/1_lalo_F05gqkzX7WhKVpSL/happy_01.ogg",
+        "31m": "samples/31m/es/es-mx/male/1_lalo_F05gqkzX7WhKVpSL/happy_01.ogg",
+        "default": "samples/es/es-mx/male/1_lalo_F05gqkzX7WhKVpSL.ogg"
+      }
+    },
+    {
+      "voice_id": "BkuASiOJRrJEB5qA",
+      "name": "Leonel",
+      "language": "es",
+      "locale": "es-mx",
+      "gender": "male",
+      "age": "Middle-age",
+      "description": "Velvety and even tempered, sincere when an apology is due and genuinely pleased when the news is good.",
+      "filename": "voices/BkuASiOJRrJEB5qA.safetensors",
+      "size": 256136,
+      "sha256": "d32ad93e71b8c726a8f1aac62f276db82346fc1a74a02cfc18ce2b867cf20a07",
+      "samples": {
+        "40m": "samples/40m/es/es-mx/male/5_leonel_BkuASiOJRrJEB5qA/happy_01.ogg",
+        "31m": "samples/31m/es/es-mx/male/5_leonel_BkuASiOJRrJEB5qA/happy_01.ogg",
+        "default": "samples/es/es-mx/male/5_leonel_BkuASiOJRrJEB5qA.ogg"
+      }
+    },
+    {
+      "voice_id": "PwgPEaweQILZdGc4",
+      "name": "Nico",
+      "language": "es",
+      "locale": "es-mx",
+      "gender": "male",
+      "age": "Young Adult",
+      "description": "Sparky and to the point, with clean articulation that cuts through a loud music bed and a brisk rhythm that follows the copy's beats.",
+      "filename": "voices/PwgPEaweQILZdGc4.safetensors",
+      "size": 256136,
+      "sha256": "91af1c0e9233b3069fab26eabd191e6be4d7825eff5d5e1ce3034fbd8f7fcf24",
+      "samples": {
+        "40m": "samples/40m/es/es-mx/male/6_nico_PwgPEaweQILZdGc4/happy_01.ogg",
+        "31m": "samples/31m/es/es-mx/male/6_nico_PwgPEaweQILZdGc4/happy_01.ogg",
+        "default": "samples/es/es-mx/male/6_nico_PwgPEaweQILZdGc4.ogg"
+      }
+    },
+    {
+      "voice_id": "Sx8m6WdXBG06zwZT",
+      "name": "Rebeca",
+      "language": "es",
+      "locale": "es-mx",
+      "gender": "female",
+      "age": "Young Adult",
+      "description": "Fuller and grounded in the low end, with hard consonant edges and a decisive punch saved for the brand name.",
+      "filename": "voices/Sx8m6WdXBG06zwZT.safetensors",
+      "size": 256136,
+      "sha256": "8756dddf95fa449d0e5a8649c6a242a460329c53e2f870bbe6ed744d0573a251",
+      "samples": {
+        "40m": "samples/40m/es/es-mx/female/1_rebeca_Sx8m6WdXBG06zwZT/happy_01.ogg",
+        "31m": "samples/31m/es/es-mx/female/1_rebeca_Sx8m6WdXBG06zwZT/happy_01.ogg",
+        "default": "samples/es/es-mx/female/1_rebeca_Sx8m6WdXBG06zwZT.ogg"
+      }
+    },
+    {
+      "voice_id": "s58clrg2fe0MO7Y-",
+      "name": "Regina",
+      "language": "es",
+      "locale": "es-mx",
+      "gender": "female",
+      "age": "Adult",
+      "description": "A confident, upbeat Mexican Spanish adult voice with the natural assurance of a closer. Ideal for proactive assistants and sales-led customer interactions.",
+      "filename": "voices/s58clrg2fe0MO7Y-.safetensors",
+      "size": 256136,
+      "sha256": "ab923d4fd9ed09954e3a91c61780bcd536f5bb5787e1d0541cb6ff56dd7ff531",
+      "samples": {
+        "40m": "samples/40m/es/es-mx/female/2_regina_s58clrg2fe0MO7Y-/happy_01.ogg",
+        "31m": "samples/31m/es/es-mx/female/2_regina_s58clrg2fe0MO7Y-/happy_01.ogg",
+        "default": "samples/es/es-mx/female/2_regina_s58clrg2fe0MO7Y-.ogg"
+      }
+    },
+    {
+      "voice_id": "G5HLUsQd659UtRe7",
+      "name": "Ulises",
+      "language": "es",
+      "locale": "es-mx",
+      "gender": "male",
+      "age": "Middle-age",
+      "description": "Low and resonant, with a settled delivery and consonants that survive a handset.",
+      "filename": "voices/G5HLUsQd659UtRe7.safetensors",
+      "size": 256136,
+      "sha256": "fba1a4349c3c86aabc58d6570a82fac0ed643e5e7aa97b52a3ede6b792e6d420",
+      "samples": {
+        "40m": "samples/40m/es/es-mx/male/4_ulises_G5HLUsQd659UtRe7/happy_01.ogg",
+        "31m": "samples/31m/es/es-mx/male/4_ulises_G5HLUsQd659UtRe7/happy_01.ogg",
+        "default": "samples/es/es-mx/male/4_ulises_G5HLUsQd659UtRe7.ogg"
+      }
+    },
+    {
+      "voice_id": "VDwnGxAo68C8U8vC",
+      "name": "Ximena",
+      "language": "es",
+      "locale": "es-mx",
+      "gender": "female",
+      "age": "Adult",
+      "description": "A playful, expressive Mexican Spanish adult voice that turns everyday moments into stories. Great for engaging assistants and personable conversational AI.",
+      "filename": "voices/VDwnGxAo68C8U8vC.safetensors",
+      "size": 256136,
+      "sha256": "ccb1b88e3899db1cb7ba71007d08ed56dd743882214f0495b67feab89850ffe0",
+      "samples": {
+        "40m": "samples/40m/es/es-mx/female/6_ximena_VDwnGxAo68C8U8vC/happy_01.ogg",
+        "31m": "samples/31m/es/es-mx/female/6_ximena_VDwnGxAo68C8U8vC/happy_01.ogg",
+        "default": "samples/es/es-mx/female/6_ximena_VDwnGxAo68C8U8vC.ogg"
+      }
+    },
+    {
+      "voice_id": "ALczEazoF4n6PmGl",
+      "name": "Yael",
+      "language": "es",
+      "locale": "es-mx",
+      "gender": "male",
+      "age": "Young Adult",
+      "description": "Close, ringing tone with a grin in it, dropping right down for one clause then climbing into the payoff.",
+      "filename": "voices/ALczEazoF4n6PmGl.safetensors",
+      "size": 256136,
+      "sha256": "f4ebe6b59ebfa09339cb4c15c9c8f0af72fb6cecd9feb1f550dee0d95c8092c1",
+      "samples": {
+        "40m": "samples/40m/es/es-mx/male/3_yael_ALczEazoF4n6PmGl/happy_01.ogg",
+        "31m": "samples/31m/es/es-mx/male/3_yael_ALczEazoF4n6PmGl/happy_01.ogg",
+        "default": "samples/es/es-mx/male/3_yael_ALczEazoF4n6PmGl.ogg"
+      }
+    },
+    {
+      "voice_id": "sGCMzFIA53ppIngM",
+      "name": "Clarice",
+      "language": "pt",
+      "locale": "pt-br",
+      "gender": "female",
+      "age": "Older Adult",
+      "description": "Quiet authority in a deep, resonant lower range, even in dynamics and firm at the end of every sentence.",
+      "filename": "voices/sGCMzFIA53ppIngM.safetensors",
+      "size": 256136,
+      "sha256": "edbfd1498e78dab5a1f707c4ff5a169e887741abf4e78d2e9759d242cd32b25c",
+      "samples": {
+        "40m": "samples/40m/pt/pt-br/female/5_clarice_sGCMzFIA53ppIngM/happy_01.ogg",
+        "31m": "samples/31m/pt/pt-br/female/5_clarice_sGCMzFIA53ppIngM/happy_01.ogg",
+        "default": "samples/pt/pt-br/female/5_clarice_sGCMzFIA53ppIngM.ogg"
+      }
+    },
+    {
+      "voice_id": "NuUr_x5V90hSHzCJ",
+      "name": "Davi",
+      "language": "pt",
+      "locale": "pt-br",
+      "gender": "male",
+      "age": "Adult",
+      "description": "A confident, upbeat Brazilian Portuguese adult voice with infectious energy. Perfect for proactive assistants and motivating customer success calls.",
+      "filename": "voices/NuUr_x5V90hSHzCJ.safetensors",
+      "size": 256136,
+      "sha256": "593c8c56619008116b30d7ad1bae5433d6834060b5b757e51799574601badd99",
+      "samples": {
+        "40m": "samples/40m/pt/pt-br/male/1_davi_NuUr_x5V90hSHzCJ/happy_01.ogg",
+        "31m": "samples/31m/pt/pt-br/male/1_davi_NuUr_x5V90hSHzCJ/happy_01.ogg",
+        "default": "samples/pt/pt-br/male/1_davi_NuUr_x5V90hSHzCJ.ogg"
+      }
+    },
+    {
+      "voice_id": "K8mj96kYHMy8q3Hb",
+      "name": "Débora",
+      "language": "pt",
+      "locale": "pt-br",
+      "gender": "female",
+      "age": "Middle-age",
+      "description": "Low-set and resonant, with firm even phrasing and short decisive sentences.",
+      "filename": "voices/K8mj96kYHMy8q3Hb.safetensors",
+      "size": 256136,
+      "sha256": "00d4323db427bb68d8b6eed15b1294840e2037bcabc1d6fe6385191efae414b0",
+      "samples": {
+        "40m": "samples/40m/pt/pt-br/female/3_debora_K8mj96kYHMy8q3Hb/happy_01.ogg",
+        "31m": "samples/31m/pt/pt-br/female/3_debora_K8mj96kYHMy8q3Hb/happy_01.ogg",
+        "default": "samples/pt/pt-br/female/3_debora_K8mj96kYHMy8q3Hb.ogg"
+      }
+    },
+    {
+      "voice_id": "gOc90Rjmv5CobHCj",
+      "name": "Flávia",
+      "language": "pt",
+      "locale": "pt-br",
+      "gender": "female",
+      "age": "Middle-age",
+      "description": "Compact, resonant timbre with crisp consonants and focused, forward phrasing.",
+      "filename": "voices/gOc90Rjmv5CobHCj.safetensors",
+      "size": 256136,
+      "sha256": "f6e911481dd0bd60a36d77c1883f2f237b5b78275615498764a07456e8685c7c",
+      "samples": {
+        "40m": "samples/40m/pt/pt-br/female/6_flavia_gOc90Rjmv5CobHCj/happy_01.ogg",
+        "31m": "samples/31m/pt/pt-br/female/6_flavia_gOc90Rjmv5CobHCj/happy_01.ogg",
+        "default": "samples/pt/pt-br/female/6_flavia_gOc90Rjmv5CobHCj.ogg"
+      }
+    },
+    {
+      "voice_id": "l7520SIXi14iEamd",
+      "name": "Igor",
+      "language": "pt",
+      "locale": "pt-br",
+      "gender": "male",
+      "age": "Middle-age",
+      "description": "Lifted and lively, pitch moving across a phrase, articulation quick and tidy.",
+      "filename": "voices/l7520SIXi14iEamd.safetensors",
+      "size": 256136,
+      "sha256": "044d37978b68c5363e0fda99873c9f657323c350d8351b4d266bf03b2f839c30",
+      "samples": {
+        "40m": "samples/40m/pt/pt-br/male/2_igor_l7520SIXi14iEamd/happy_01.ogg",
+        "31m": "samples/31m/pt/pt-br/male/2_igor_l7520SIXi14iEamd/happy_01.ogg",
+        "default": "samples/pt/pt-br/male/2_igor_l7520SIXi14iEamd.ogg"
+      }
+    },
+    {
+      "voice_id": "CtNvKUUMrx1h56ih",
+      "name": "Isadora",
+      "language": "pt",
+      "locale": "pt-br",
+      "gender": "female",
+      "age": "Young",
+      "description": "An upbeat young voice with a light girlish tone and warm bounce, quick and to the point, ideal for efficient, caring customer service.",
+      "filename": "voices/CtNvKUUMrx1h56ih.safetensors",
+      "size": 256136,
+      "sha256": "ad6f5ca7df38abbb15b85a09613b14ebd76d70108d5420e6f21486a6a10154c9",
+      "samples": {
+        "40m": "samples/40m/pt/pt-br/female/2_isadora_CtNvKUUMrx1h56ih/happy_01.ogg",
+        "31m": "samples/31m/pt/pt-br/female/2_isadora_CtNvKUUMrx1h56ih/happy_01.ogg",
+        "default": "samples/pt/pt-br/female/2_isadora_CtNvKUUMrx1h56ih.ogg"
+      }
+    },
+    {
+      "voice_id": "6HftnVU1XqVBJS8t",
+      "name": "Kauã",
+      "language": "pt",
+      "locale": "pt-br",
+      "gender": "male",
+      "age": "Young Adult",
+      "description": "Sparky and close, with clean attack, brisk rhythm and a decisive push on the final clause that cuts over a loud music bed.",
+      "filename": "voices/6HftnVU1XqVBJS8t.safetensors",
+      "size": 256136,
+      "sha256": "b0c3223c6de2597e3eef285e9def7998e9861b2056ee4784cddb29174bfc4dc4",
+      "samples": {
+        "40m": "samples/40m/pt/pt-br/male/3_kaua_6HftnVU1XqVBJS8t/happy_01.ogg",
+        "31m": "samples/31m/pt/pt-br/male/3_kaua_6HftnVU1XqVBJS8t/happy_01.ogg",
+        "default": "samples/pt/pt-br/male/3_kaua_6HftnVU1XqVBJS8t.ogg"
+      }
+    },
+    {
+      "voice_id": "KgC2Nqnjj48NUiyV",
+      "name": "Manuela-Lu",
+      "language": "pt",
+      "locale": "pt-br",
+      "gender": "female",
+      "age": "Young",
+      "description": "A bright, sweet, chirpy young voice with breathless excitement and a constant smile, a warm receptionist who greets everyone like a friend.",
+      "filename": "voices/KgC2Nqnjj48NUiyV.safetensors",
+      "size": 256136,
+      "sha256": "f6b455eec3ad536c2c8b7b2f18a5620cb46ebf7576a040299fce4de6376ad3a3",
+      "samples": {
+        "40m": "samples/40m/pt/pt-br/female/1_manuela_lu_KgC2Nqnjj48NUiyV/happy_01.ogg",
+        "31m": "samples/31m/pt/pt-br/female/1_manuela_lu_KgC2Nqnjj48NUiyV/happy_01.ogg",
+        "default": "samples/pt/pt-br/female/1_manuela_lu_KgC2Nqnjj48NUiyV.ogg"
+      }
+    },
+    {
+      "voice_id": "qDeAnE4L4bk0BRz1",
+      "name": "Marcelo",
+      "language": "pt",
+      "locale": "pt-br",
+      "gender": "male",
+      "age": "Middle-age",
+      "description": "Low and grounded, consonants firm, phrases short and sure of themselves.",
+      "filename": "voices/qDeAnE4L4bk0BRz1.safetensors",
+      "size": 256136,
+      "sha256": "842930df459e1d636cdd3414cd60ab2631ebfdff29460a922415e506b1cc5ed1",
+      "samples": {
+        "40m": "samples/40m/pt/pt-br/male/6_marcelo_qDeAnE4L4bk0BRz1/happy_01.ogg",
+        "31m": "samples/31m/pt/pt-br/male/6_marcelo_qDeAnE4L4bk0BRz1/happy_01.ogg",
+        "default": "samples/pt/pt-br/male/6_marcelo_qDeAnE4L4bk0BRz1.ogg"
+      }
+    },
+    {
+      "voice_id": "JYtmeaysoaR0Wybf",
+      "name": "Otávio",
+      "language": "pt",
+      "locale": "pt-br",
+      "gender": "male",
+      "age": "Older Adult",
+      "description": "Low, chest-resonant and settled, with even dynamics and real pauses that hold a paragraph together.",
+      "filename": "voices/JYtmeaysoaR0Wybf.safetensors",
+      "size": 256136,
+      "sha256": "2450c247061a20c202f63caabe4594379a8fc8599f9fcbb28642a2dd3d247ad1",
+      "samples": {
+        "40m": "samples/40m/pt/pt-br/male/5_otavio_JYtmeaysoaR0Wybf/happy_01.ogg",
+        "31m": "samples/31m/pt/pt-br/male/5_otavio_JYtmeaysoaR0Wybf/happy_01.ogg",
+        "default": "samples/pt/pt-br/male/5_otavio_JYtmeaysoaR0Wybf.ogg"
+      }
+    },
+    {
+      "voice_id": "6k6cRt7QJfm5ChrH",
+      "name": "Rafaela",
+      "language": "pt",
+      "locale": "pt-br",
+      "gender": "female",
+      "age": "Young",
+      "description": "A spirited young voice with bell-like clarity and joyful bounce, narrating like the best sleepover ever, a light, fun personal assistant.",
+      "filename": "voices/6k6cRt7QJfm5ChrH.safetensors",
+      "size": 256136,
+      "sha256": "96ca40ceb24b3cbbff9868c6a920f6c7ff3d471b76698d8cd8b7c542c38d814f",
+      "samples": {
+        "40m": "samples/40m/pt/pt-br/female/4_rafaela_6k6cRt7QJfm5ChrH/happy_01.ogg",
+        "31m": "samples/31m/pt/pt-br/female/4_rafaela_6k6cRt7QJfm5ChrH/happy_01.ogg",
+        "default": "samples/pt/pt-br/female/4_rafaela_6k6cRt7QJfm5ChrH.ogg"
+      }
+    },
+    {
+      "voice_id": "mWgyMRkFED70QxQv",
+      "name": "Vitor",
+      "language": "pt",
+      "locale": "pt-br",
+      "gender": "male",
+      "age": "Middle-age",
+      "description": "Lean and focused, with light pitch movement and a tidy rhythm that stays on point.",
+      "filename": "voices/mWgyMRkFED70QxQv.safetensors",
+      "size": 256136,
+      "sha256": "8732e9ed54a3380cf864152d3adfd0ed056af85f5e2f468395244a51a923842e",
+      "samples": {
+        "40m": "samples/40m/pt/pt-br/male/4_vitor_mWgyMRkFED70QxQv/happy_01.ogg",
+        "31m": "samples/31m/pt/pt-br/male/4_vitor_mWgyMRkFED70QxQv/happy_01.ogg",
+        "default": "samples/pt/pt-br/male/4_vitor_mWgyMRkFED70QxQv.ogg"
+      }
+    }
+  ]
+}

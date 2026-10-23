@@ -1,0 +1,52 @@
+# -----------------------------------------------------------------------------
+# Publish the voice demo page (site/) on GitHub Pages:
+#   https://<owner>.github.io/<repository>/
+# The Configuration screen links to it from the "Voice" section of the
+# manifest. One-time setup: Settings -> Pages -> Source: "GitHub Actions".
+# -----------------------------------------------------------------------------
+name: Voice demo page
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'site/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# One deployment at a time; a newer one replaces a queued one.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload the site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

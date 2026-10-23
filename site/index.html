@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phonon voices</title>
+    <meta
+      name="description"
+      content="Listen to the Phonon voices available in the Phonon TTS integration for Gladys Assistant."
+    />
+    <style>
+      :root {
+        --bg: #f7f7f5;
+        --surface: #ffffff;
+        --text: #1d1d1b;
+        --muted: #65655f;
+        --border: #e2e2dc;
+        --accent: #3557d4;
+        --accent-text: #ffffff;
+        --chip: #eef1fb;
+        --focus: #3557d4;
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #141416;
+          --surface: #1d1d21;
+          --text: #ececea;
+          --muted: #a2a29c;
+          --border: #313137;
+          --accent: #8ea6ff;
+          --accent-text: #10131f;
+          --chip: #262b3d;
+          --focus: #8ea6ff;
+          color-scheme: dark;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font:
+          16px/1.5 system-ui,
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          sans-serif;
+      }
+      main {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 32px 16px 48px;
+      }
+      h1 {
+        font-size: 1.75rem;
+        margin: 0 0 8px;
+      }
+      .intro {
+        color: var(--muted);
+        margin: 0 0 24px;
+        max-width: 70ch;
+      }
+      .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+      .filters label {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        font-size: 0.85rem;
+        color: var(--muted);
+        flex: 1 1 160px;
+      }
+      select,
+      input[type='search'] {
+        font: inherit;
+        color: var(--text);
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 8px 10px;
+        width: 100%;
+      }
+      .count {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin: 0 0 12px;
+      }
+      .grid {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-width: 0;
+      }
+      .card h2 {
+        font-size: 1.1rem;
+        margin: 0;
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .chip {
+        background: var(--chip);
+        border-radius: 999px;
+        padding: 2px 10px;
+        font-size: 0.8rem;
+      }
+      .description {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin: 0;
+      }
+      .play {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      button {
+        font: inherit;
+        font-size: 0.9rem;
+        border: 1px solid var(--accent);
+        background: transparent;
+        color: var(--accent);
+        border-radius: 8px;
+        padding: 6px 12px;
+        cursor: pointer;
+      }
+      button[aria-pressed='true'] {
+        background: var(--accent);
+        color: var(--accent-text);
+      }
+      button:focus-visible,
+      select:focus-visible,
+      input:focus-visible {
+        outline: 2px solid var(--focus);
+        outline-offset: 2px;
+      }
+      .pick {
+        font-size: 0.85rem;
+        border-top: 1px solid var(--border);
+        padding-top: 10px;
+        margin: 0;
+        overflow-wrap: anywhere;
+      }
+      .pick span {
+        color: var(--muted);
+      }
+      footer {
+        margin-top: 32px;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+      a {
+        color: var(--accent);
+      }
+      .error {
+        color: #c0392b;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 data-i18n="title">Phonon voices</h1>
+      <p class="intro" data-i18n="intro">
+        The voices of the Phonon TTS integration for Gladys Assistant. Listen to a sample, then pick
+        the voice in the integration's configuration, under the name shown at the bottom of its
+        card.
+      </p>
+      <div class="filters">
+        <label
+          ><span data-i18n="language">Language</span>
+          <select id="language"></select>
+        </label>
+        <label
+          ><span data-i18n="gender">Gender</span>
+          <select id="gender"></select>
+        </label>
+        <label
+          ><span data-i18n="model">Sample spoken by</span>
+          <select id="size">
+            <option value="40m">Phonon 40m</option>
+            <option value="31m">Phonon 31m</option>
+          </select>
+        </label>
+        <label
+          ><span data-i18n="search">Search</span>
+          <input id="search" type="search" autocomplete="off" />
+        </label>
+      </div>
+      <p class="count" id="count" aria-live="polite"></p>
+      <ul class="grid" id="voices"></ul>
+      <footer>
+        <p data-i18n="footer">
+          Voices from the gradium/phonon-voices catalog (Apache 2.0), by Gradium. Every voice works
+          with every Phonon model, but sounds best in its own language.
+        </p>
+        <p>
+          <a href="https://github.com/bertrandda/gladys-phonon"
+            >github.com/bertrandda/gladys-phonon</a
+          >
+        </p>
+      </footer>
+    </main>
+    <script>
+      const LANG =
+        navigator.language && navigator.language.toLowerCase().startsWith('fr') ? 'fr' : 'en';
+      const TEXT = {
+        en: {
+          all: 'All',
+          female: 'Female',
+          male: 'Male',
+          character: 'Character',
+          count: (n) => `${n} voice${n === 1 ? '' : 's'}`,
+          play: 'Play',
+          stop: 'Stop',
+          sample: 'Sample',
+          pick: 'In Gladys, choose:',
+          loadError: 'The voice list could not be loaded.',
+        },
+        fr: {
+          title: 'Voix Phonon',
+          intro:
+            "Les voix de l'intégration Phonon TTS pour Gladys Assistant. Écoutez un extrait, puis choisissez la voix dans la configuration de l'intégration, sous le nom indiqué en bas de sa carte.",
+          language: 'Langue',
+          gender: 'Genre',
+          model: 'Extrait prononcé par',
+          search: 'Rechercher',
+          footer:
+            'Voix du catalogue gradium/phonon-voices (Apache 2.0), par Gradium. Chaque voix fonctionne avec tous les modèles Phonon, mais sonne mieux dans sa langue.',
+          all: 'Toutes',
+          female: 'Femme',
+          male: 'Homme',
+          character: 'Personnage',
+          count: (n) => `${n} voix`,
+          play: 'Écouter',
+          stop: 'Arrêter',
+          sample: 'Extrait',
+          pick: 'Dans Gladys, choisissez :',
+          loadError: "La liste des voix n'a pas pu être chargée.",
+        },
+      };
+      const LANGUAGES = {
+        fr: { en: 'French', fr: 'Français' },
+        en: { en: 'English', fr: 'Anglais' },
+        de: { en: 'German', fr: 'Allemand' },
+        es: { en: 'Spanish', fr: 'Espagnol' },
+        pt: { en: 'Portuguese', fr: 'Portugais' },
+      };
+      const t = (key) => (TEXT[LANG][key] !== undefined ? TEXT[LANG][key] : TEXT.en[key]);
+
+      document.documentElement.lang = LANG;
+      document.title = t('title') || document.title;
+      for (const el of document.querySelectorAll('[data-i18n]')) {
+        const value = TEXT[LANG][el.dataset.i18n];
+        if (typeof value === 'string') el.textContent = value;
+      }
+
+      const $ = (id) => document.getElementById(id);
+      const audio = new Audio();
+      let playing = null;
+      let data = null;
+
+      function option(value, label) {
+        const o = document.createElement('option');
+        o.value = value;
+        o.textContent = label;
+        return o;
+      }
+
+      function stop() {
+        audio.pause();
+        if (playing) playing.setAttribute('aria-pressed', 'false');
+        if (playing) playing.textContent = `▶ ${t('play')}`;
+        playing = null;
+      }
+      audio.addEventListener('ended', stop);
+
+      function render() {
+        const language = $('language').value;
+        const gender = $('gender').value;
+        const size = $('size').value;
+        const query = $('search').value.trim().toLowerCase();
+        const list = data.voices.filter(
+          (v) =>
+            (!language || v.language === language) &&
+            (!gender ||
+              (gender === 'character' ? v.locale === 'characters' : v.gender === gender)) &&
+            (!query ||
+              `${v.name} ${v.description || ''} ${v.label[LANG]}`.toLowerCase().includes(query)),
+        );
+        stop();
+        $('count').textContent = t('count')(list.length);
+        const ul = $('voices');
+        ul.replaceChildren();
+        for (const v of list) {
+          const li = document.createElement('li');
+          li.className = 'card';
+          const h2 = document.createElement('h2');
+          h2.textContent = v.name;
+          const meta = document.createElement('div');
+          meta.className = 'meta';
+          const chips = v.tags[LANG];
+          for (const text of chips) {
+            const chip = document.createElement('span');
+            chip.className = 'chip';
+            chip.textContent = text;
+            meta.append(chip);
+          }
+          const description = document.createElement('p');
+          description.className = 'description';
+          description.textContent = v.description || '';
+          const play = document.createElement('div');
+          play.className = 'play';
+          const sample = v.samples[size] || v.samples.default;
+          if (sample) {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.setAttribute('aria-pressed', 'false');
+            button.setAttribute('aria-label', `${t('sample')} ${v.name}`);
+            button.textContent = `▶ ${t('play')}`;
+            button.addEventListener('click', () => {
+              const wasPlaying = playing === button;
+              stop();
+              if (wasPlaying) return;
+              audio.src = data.base_url + sample;
+              audio.play().catch(stop);
+              playing = button;
+              button.setAttribute('aria-pressed', 'true');
+              button.textContent = `■ ${t('stop')}`;
+            });
+            play.append(button);
+          }
+          const pick = document.createElement('p');
+          pick.className = 'pick';
+          const label = document.createElement('span');
+          label.textContent = `${t('pick')} `;
+          pick.append(label, document.createTextNode(v.label[LANG]));
+          li.append(h2, meta, description, play, pick);
+          ul.append(li);
+        }
+      }
+
+      fetch('voices.json')
+        .then((response) => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return response.json();
+        })
+        .then((json) => {
+          data = json;
+          const languages = [...new Set(data.voices.map((v) => v.language))];
+          $('language').append(
+            option('', t('all')),
+            ...languages.map((l) => option(l, LANGUAGES[l] ? LANGUAGES[l][LANG] : l)),
+          );
+          $('language').value = languages.includes(LANG) ? LANG : '';
+          $('gender').append(
+            option('', t('all')),
+            option('female', t('female')),
+            option('male', t('male')),
+            option('character', t('character')),
+          );
+          for (const id of ['language', 'gender', 'size']) $(id).addEventListener('change', render);
+          $('search').addEventListener('input', render);
+          render();
+        })
+        .catch(() => {
+          $('count').textContent = t('loadError');
+          $('count').classList.add('error');
+        });
+    </script>
+  </body>
+</html>
