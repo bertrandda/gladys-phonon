@@ -29,8 +29,8 @@ Gladys core ──WebSocket: tts.synthesize / command-result──► main conta
 - Gladys sends `external-integration.tts.synthesize { text, language }` over the integration
   WebSocket and expects the audio within 30 s
   ([TTS provider spec](https://github.com/GladysAssistant/Gladys/blob/master/docs/specs/external-integrations/capabilities/tts-type.md)).
-  The JS SDK 0.15 has no `onTtsSynthesize` yet: [`src/ttsShim.js`](src/ttsShim.js) answers the
-  command on the SDK's own WebSocket, and switches to the SDK handler as soon as it exists.
+  The integration answers it with the `onTtsSynthesize` handler of the JS SDK (0.16 or later),
+  which checks the clip against the contract (content type, base64, 5 MB) before the ack.
 - Speech is synthesized by the official `ptts-openai-server` image, declared as a sub-container
   in the [manifest](gladys-assistant-integration.json) (1 GB, 2 CPUs: the main container is limited
   to 256 MB and half a CPU). Its API streams MP3, which lets a synthesis that runs late hand back

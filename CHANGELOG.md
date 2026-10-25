@@ -31,5 +31,7 @@ the notes of the version's GitHub Release.
   restart the speech engine.
 - A text too long to be spoken within the time Gladys waits is cut, and its
   beginning is spoken.
+- Built on the integration SDK 0.16.0: Gladys' speech requests are answered by
+  its `onTtsSynthesize` handler, which checks every clip before sending it.
 
 [Unreleased]: https://github.com/bertrandda/gladys-phonon/commits/HEAD

@@ -33,8 +33,7 @@ Docker image: run the three commands before pushing.
 
 ```
 index.js                     builds the dependencies, connects
-src/integration.js           SDK wiring: TTS command, config updates, actions
-src/ttsShim.js               external-integration.tts.synthesize until the SDK has onTtsSynthesize
+src/integration.js           SDK wiring: onTtsSynthesize, config updates, actions
 src/engine.js                sub-container lifecycle, downloads, statuses, synthesis queue
 src/hub.js                   Hugging Face downloads into the shared volume
 src/voiceStore.js            the voice folder (catalog voice or Gradium custom voice)
@@ -56,9 +55,9 @@ test/helpers/fakeServers.js  fake Hub, speech server and Gradium API on 127.0.0.
 - **The manifest voice options are generated**: change `src/voiceLabels.js` or
   the script, then run `npm run sync-voices`. `test/manifest.test.js` checks the
   options match `src/voices.catalog.json`.
-- **The TTS shim uses SDK internals** (`_handleMessage`, `_send`): keep the SDK
-  pinned to an exact version and run `test/ttsShim.test.js` when bumping it.
-  Once the SDK ships `onTtsSynthesize`, the shim delegates to it.
+- **Speech goes through the SDK**: `gladys.onTtsSynthesize` (SDK 0.16+)
+  resolves the clip as `audio/mpeg;base64,...`; the SDK validates it before the
+  ack. Test it with `gladys.fake.ttsSynthesize(text, language)`.
 - **The container rootfs is read-only.** Write only under `/data`; the
   sub-container volume `/models` is `/data/containers/phonon/models` here.
   Never log tokens or API keys.

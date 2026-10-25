@@ -1,6 +1,7 @@
-// The whole integration as Gladys drives it: install with no model, the
-// administrator saves a model, Gladys asks for speech over the WebSocket, the
-// actions of the Configuration screen.
+// The whole integration as Gladys drives it, through the SDK's fake Gladys:
+// install with no model, the administrator saves a model, Gladys asks for
+// speech (external-integration.tts.synthesize, onTtsSynthesize), the actions
+// of the Configuration screen.
 
 import { test, before, after, beforeEach, afterEach } from 'node:test';
 import assert from 'node:assert/strict';
@@ -9,7 +10,6 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createFakeGladys } from '@gladysassistant/integration-sdk/testing';
 import { createEngine, registerIntegration } from '../src/integration.js';
-import { TTS_SYNTHESIZE } from '../src/ttsShim.js';
 import {
   silentLogger,
   startFakeGradium,
@@ -77,7 +77,7 @@ async function install(config = {}) {
     engineOptions: { pollIntervalMs: 5, healthTimeoutMs: 1000 },
   });
   engine = built.engine;
-  registerIntegration(gladys, { ...built, logger });
+  registerIntegration(gladys, built);
   await gladys.connect();
   await engine.applying;
 }
@@ -88,7 +88,7 @@ test('fresh install: unusable until a model is chosen, then speaks', async () =>
     gladys.fake.bodies('POST', '/connection_status').at(-1).message.en,
     /No model selected/,
   );
-  const refused = await gladys.fake.send(TTS_SYNTHESIZE, { text: 'Hello', language: 'en' });
+  const refused = await gladys.fake.ttsSynthesize('Hello', 'en');
   assert.equal(refused.success, false);
   assert.match(refused.error, /No model selected/);
 
@@ -96,9 +96,26 @@ test('fresh install: unusable until a model is chosen, then speaks', async () =>
   await engine.applying;
   assert.equal(gladys.fake.bodies('POST', '/connection_status').at(-1).connected, true);
 
-  const ack = await gladys.fake.send(TTS_SYNTHESIZE, { text: 'Hello', language: 'en' });
+  const ack = await gladys.fake.ttsSynthesize('Hello', 'en');
   assert.equal(ack.success, true);
   assert.match(ack.data.audio, /^audio\/mpeg;base64,/);
+  assert.deepEqual(phonon.state.requests.at(-1), { input: 'Hello', response_format: 'mp3' });
+});
+
+test('a request without language (an announcement of an unknown user) is spoken', async () => {
+  await install({ model: 'phonon-31m-en' });
+  const ack = await gladys.fake.ttsSynthesize('Hello');
+  assert.equal(ack.success, true);
+});
+
+test('an audio the SDK refuses is acked as a failure with the reason', async () => {
+  await install({ model: 'phonon-31m-en' });
+  // The SDK checks the clip against the contract before the ack (content
+  // type, base64, 5 MB): a regression of the engine would surface here.
+  engine.synthesize = async () => 'audio/flac;base64,AAAA';
+  const ack = await gladys.fake.ttsSynthesize('Hello', 'en');
+  assert.equal(ack.success, false);
+  assert.match(ack.error, /content type must be one of/);
 });
 
 test('the test action speaks a sentence and reports it', async () => {

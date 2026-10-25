@@ -30,7 +30,7 @@ const { engine, gradium } = createEngine({
   phononUrl: process.env.PHONON_URL || undefined,
 });
 
-registerIntegration(gladys, { engine, gradium, logger });
+registerIntegration(gladys, { engine, gradium });
 
 gladys.handleShutdown((signal) => {
   logger.info(`Received ${signal}, shutting down`);

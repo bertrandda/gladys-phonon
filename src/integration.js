@@ -10,7 +10,6 @@ import { Engine } from './engine.js';
 import { Gradium } from './gradium.js';
 import { Hub } from './hub.js';
 import { PhononClient } from './phononClient.js';
-import { onTtsSynthesize } from './ttsShim.js';
 import { VoiceStore } from './voiceStore.js';
 
 /**
@@ -58,14 +57,15 @@ export function createEngine({
 /**
  * Register every handler on the SDK client. Call before gladys.connect().
  * @param {object} gladys - SDK client.
- * @param {{ engine: Engine, gradium: Gradium, logger: object }} deps
+ * @param {{ engine: Engine, gradium: Gradium }} deps
  */
-export function registerIntegration(gladys, { engine, gradium, logger }) {
+export function registerIntegration(gladys, { engine, gradium }) {
   const config = () => normalizeConfig(gladys.config);
 
-  // Gladys asks for speech: scene "Play a notification", voice assistant.
-  const mechanism = onTtsSynthesize(gladys, (text, language) => engine.synthesize(text, language));
-  logger.debug(`tts.synthesize handled by the ${mechanism}`);
+  // Gladys asks for speech (scene "Play a notification", voice assistant):
+  // resolve the clip as `audio/mpeg;base64,...`. The SDK checks it before the
+  // ack, and a throw acks the command as failed.
+  gladys.onTtsSynthesize((text, language) => engine.synthesize(text, language));
 
   // The administrator saved the configuration. Not awaited: a model download
   // can take minutes, its progress shows in the connection status.
