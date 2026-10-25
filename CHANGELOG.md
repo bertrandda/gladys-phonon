@@ -10,6 +10,8 @@ the notes of the version's GitHub Release.
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-25
+
 ### Added
 
 - Offline text-to-speech provider for Gladys (`tts` integration type): Gladys
@@ -34,4 +36,5 @@ the notes of the version's GitHub Release.
 - Built on the integration SDK 0.16.0: Gladys' speech requests are answered by
   its `onTtsSynthesize` handler, which checks every clip before sending it.
 
-[Unreleased]: https://github.com/bertrandda/gladys-phonon/commits/HEAD
+[Unreleased]: https://github.com/bertrandda/gladys-phonon/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/bertrandda/gladys-phonon/releases/tag/v0.1.1
