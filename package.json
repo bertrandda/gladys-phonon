@@ -1,6 +1,6 @@
 {
   "name": "gladys-phonon",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "private": true,
   "description": "Offline text-to-speech for Gladys Assistant with Gradium's Phonon models.",
   "type": "module",

@@ -6,8 +6,8 @@
     "en": "Offline text-to-speech: Gladys speaks with Gradium's Phonon voices, on your own hardware.",
     "fr": "Synthèse vocale hors ligne : Gladys parle avec les voix Phonon de Gradium, sur votre machine."
   },
-  "version": "0.1.1",
-  "docker_image": "ghcr.io/bertrandda/gladys-phonon:0.1.1",
+  "version": "1.0.0",
+  "docker_image": "ghcr.io/bertrandda/gladys-phonon:1.0.0",
   "gladys_version": ">=5.3.0",
   "cover_image": "https://raw.githubusercontent.com/bertrandda/gladys-phonon/HEAD/phonon.jpg",
   "categories": ["assistants"],

@@ -10,6 +10,8 @@ the notes of the version's GitHub Release.
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-10-26
+
 ## [0.1.1] - 2026-10-25
 
 ### Added
@@ -36,5 +38,6 @@ the notes of the version's GitHub Release.
 - Built on the integration SDK 0.16.0: Gladys' speech requests are answered by
   its `onTtsSynthesize` handler, which checks every clip before sending it.
 
-[Unreleased]: https://github.com/bertrandda/gladys-phonon/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/bertrandda/gladys-phonon/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/bertrandda/gladys-phonon/compare/v0.1.1...v1.0.0
 [0.1.1]: https://github.com/bertrandda/gladys-phonon/releases/tag/v0.1.1
